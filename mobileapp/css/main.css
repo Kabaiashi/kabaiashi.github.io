@@ -102,9 +102,12 @@ header {
   text-align: center;
   text-transform: uppercase;
   font: 700 28px/36px 'Raleway', sans-serif; }
+  .section-header--contact {
+    color: #fff;
+    line-height: 24px; }
 
 .features {
-  padding: 120px 0 60px; }
+  padding: 120px 55px 60px 55px; }
   .features p {
     width: 70%;
     margin: 70px auto;
@@ -152,8 +155,8 @@ header {
     height: auto; }
 
 .video {
-  clear: left;
-  background-color: #3cf; }
+  background-color: #3cf;
+  padding: 65px 33px 70px; }
   .video .container {
     display: -ms-flexbox;
     display: flex;
@@ -161,42 +164,194 @@ header {
         justify-content: space-between; }
   .video__title {
     font: 700 28px/18px 'Raleway', sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 15px; }
   .video__description {
-    width: 43.55%; }
+    padding-right: 130px; }
     .video__description p {
       color: #fff;
       font: 300 16px/26px 'Open Sans', sans-serif; }
+  .video__ostypes {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: 16px 380px 0 0; }
+    .video__ostypes-item {
+      width: 68px;
+      height: 68px;
+      background: #0099cc center no-repeat;
+      background-size: 50%;
+      text-decoration: none;
+      border-radius: 50%;
+      line-height: 68px;
+      text-align: center;
+      display: block; }
+      .video__ostypes-item-mac {
+        background-image: url(../img/apple-logotype.svg); }
+      .video__ostypes-item-android {
+        background-image: url(../img/android-logo.svg); }
+      .video__ostypes-item-pc {
+        background-image: url(../img/windows-logo-silhouette.svg); }
+      .video__ostypes-item:hover {
+        background-color: #333; }
 
-.video__clip {
-  width: 40.32%; }
-
-.team p {
-  text-align: center;
-  margin: 0 14.11%;
-  color: #666666;
-  font: 500 16px/24px 'Open Sans', sans-serif; }
+.team {
+  padding: 78px 0 124px 0; }
+  .team p {
+    width: 70%;
+    margin: 36px auto 92px;
+    text-align: center;
+    color: #666666;
+    font: 500 16px/24px 'Open Sans', sans-serif; }
+  .team__grid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .team__grid-item {
+      width: 270px;
+      height: auto;
+      text-align: center; }
+      .team__grid-item h3 {
+        font: 500 18px/24px 'Open Sans', sans-serif;
+        color: #003333;
+        margin-top: 12px; }
+      .team__grid-item p {
+        font: 400 13px/24px 'Open Sans', sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+        text-align: center;
+        width: 100%;
+        color: #666666; }
 
 .contact {
   background: #000 url("../img/footer__bg.jpg") center no-repeat;
-  background-size: cover; }
-  .contact__details {
-    width: 33.71%; }
-    .contact__details h3 {
-      font: 400 24px/24px 'Raleway', sans-serif; }
-    .contact__details p {
-      font: 400 14px/21px 'Open Sans', sans-serif; }
-  .contact__form {
-    width: 45.97%; }
-
-.wrapper {
-  max-width: 1170px; }
+  background-size: cover;
+  padding: 56px 35px 11px; }
 
 .contact-content {
   display: -ms-flexbox;
   display: flex;
-  max-width: 1170px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 96px; }
+
+.contact__details {
+  -ms-flex: 1;
+      flex: 1;
+  color: #fff;
+  padding-right: 135px; }
+  .contact__details h3 {
+    font: 400 24px/24px 'Raleway', sans-serif; }
+  .contact__details p {
+    font: 400 14px/21px 'Open Sans', sans-serif; }
+
+.contact__social {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 30%;
+  margin-top: 18px; }
+  .contact__social--fb {
+    width: 42px;
+    height: 42px;
+    background: #336699 url(../img/facebook-logo.svg) center no-repeat;
+    background-size: 50%;
+    border-radius: 50%; }
+  .contact__social--twitter {
+    width: 42px;
+    height: 42px;
+    background: #33ccff url(../img/twitter.svg) center no-repeat;
+    background-size: 50%;
+    border-radius: 50%; }
+  .contact__social--google {
+    width: 42px;
+    height: 42px;
+    background: #cc3333 url(../img/google-plus-logo.svg) center no-repeat;
+    background-size: 50%;
+    border-radius: 50%; }
+
+.contact__means {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 16px; }
+  .contact__means a {
+    text-decoration: none;
+    color: #cc99cc;
+    font: 400 14px/24px 'Open Sans', sans-serif; }
+
+.contact__form {
+  -ms-flex: 1;
+      flex: 1;
+  font: 400 16px/24px 'Open Sans', sans-serif;
+  color: #cccccc;
+  max-width: 570px; }
+  .contact__form-sender {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin-bottom: 14px; }
+    .contact__form-sender-name {
+      max-width: 270px;
+      height: 44px; }
+      .contact__form-sender-name-input {
+        width: 100%;
+        background-color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 4px 10px 4px 20px;
+        outline: none; }
+    .contact__form-sender-email {
+      max-width: 270px;
+      height: 44px; }
+      .contact__form-sender-email-input {
+        width: 100%;
+        background-color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 4px 10px 4px 20px;
+        outline: none; }
+  .contact__form-message {
+    height: 180px;
+    margin-bottom: 30px; }
+    .contact__form-message-input {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding: 10px 20px;
+      border-radius: 3px; }
+  .contact__form-btn {
+    display: inline-block;
+    background-color: #33ccff;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 100;
+    border-radius: 3px;
+    text-align: center;
+    padding: 7px 45px 5px;
+    margin-left: 100%;
+    transform: translateX(-100%); }
+
+.copy {
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font: 400 14px/21px 'Open Sans', sans-serif;
+  margin-top: 28px;
+  border-top: 1px solid #333333; }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
