@@ -1,0 +1,410 @@
+@import "fonts.css";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+[id="home"] {
+	padding: 0 3.4% 5vh;
+	color: #f1f1f1;
+	background: url('../img/home-bg.jpg') center;
+	background-size: cover;
+}
+
+.section-part {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-line-pack: justify;
+	    align-content: space-between;
+	height: 100vh;
+	text-align: center;
+}
+
+.inner {
+	width: 100%;
+}
+
+h1 {
+	font: 600 6rem/6rem nexa, sans-serif;
+	text-transform: uppercase;
+}
+
+h2 {
+	font: 300 6rem/12rem nexa, sans-serif;
+	text-transform: uppercase;
+	color: #202020;
+}
+
+h1 span {
+	font-weight: 300;
+}
+
+nav {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 9.3vh;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.nav-link {
+	font: 300 2.4rem nexa, sans-serif;
+	text-decoration: none;
+	color: #f1f1f1;
+	text-transform: uppercase;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.another-nav-style {
+	border-color: #bebebe;
+}
+
+.another-nav-style .nav-link {
+	color: #bebebe;
+}
+
+.section-part .nav-link:hover {
+	color: #852a07;
+}
+
+.nav-link + .nav-link {
+	margin-left: 5rem;
+}
+
+.logo {
+	height: 44%;
+}
+
+[alt="logo-img"] {
+	height: 100%;
+}
+
+.scroll-down {
+	font: 600 1.8rem/1.8rem nexa, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.scroll-down__text {
+	display: block;
+}
+
+.chevron-bottom {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	margin-top: 2vh;
+	background: url('../img/about-chevron.svg') center;
+	background-size: cover;
+}
+
+@-webkit-keyframes chevron{
+	0% {top: 0;}
+	50%{top: 10px;}
+	100%{top: 0;}
+}
+
+@keyframes chevron{
+	0% {top: 0;}
+	50%{top: 10px;}
+	100%{top: 0;}
+}
+
+.chevron-bottom:hover {
+	position: relative;
+	-webkit-animation-name: chevron;
+	        animation-name: chevron;
+	-webkit-animation-duration: 0.5s;
+	        animation-duration: 0.5s;
+}
+
+.chevron-bottom--home {
+	background: url('../img/home-chevron.svg') center;
+	background-size: cover;
+}
+
+[id="about"] {
+	padding: 0 3.4% 5vh;
+}
+
+.about__info {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	padding: 6vh 5.2%;
+}
+
+[id="about"] .scroll-down {
+	color: #bebebe;
+}
+
+.photo {
+	height: 65vh;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	background: url('../img/photo.jpg') center;
+	background-size: cover;
+}
+
+.about__text {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	padding-left: 3%;
+	text-align: left;
+}
+
+.about__text p {
+	font: 300 1.8rem/4rem 'Open Sans', sans-serif;
+	margin-bottom: 15px;
+}
+
+.name {
+	width: 100px;
+	height: 20px;
+	background: url('../img/name.png') center no-repeat;
+	background-size: 100%;
+	margin-top: 5vh;
+	text-indent: -9999px;
+}
+
+[id="portfolio"] {
+	padding: 0 3.4% 5vh;
+	background: url('../img/portfolio-bg.jpg') center;
+	background-size: cover;
+}
+
+[id="portfolio"] h2 {
+	color: #f1f1f1;
+}
+
+.photo-gallery {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 5%;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.image {
+	width: 16%;
+	margin: 0 2% 2% 0;
+}
+
+.image img {
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.image img:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	        transform: scale(1.2, 1.2);
+}
+
+[id="portfolio"] .scroll-down {
+	color: #bebebe;
+}
+
+[id="contact"] {
+	padding: 0 3.4%;
+}
+
+.contact__info {
+	color: #202020;
+	text-transform: uppercase;
+}
+
+[href^="mailto"],
+[href^="tel"] {
+	color: #202020;
+	text-decoration: none;
+}
+
+[href^="mailto"]:hover,
+[href^="tel"]:hover {
+	text-decoration: underline;
+}
+
+.contact__name {
+	font: 600 2rem/6rem nexa, sans-serif;
+}
+
+.contact__description {
+	font: 300 4rem/6rem nexa, sans-serif;
+}
+
+.contact__description--phone {
+	font-size: 3rem;
+}
+
+.social-link {
+	display: inline-block;
+	vertical-align: middle;
+	width: 5rem;
+	height: 5rem;
+	border: 1px solid #2d2d2d;
+	border-radius: 50%;
+	background-size: cover;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.social-link:hover {
+	border-color: #852a07;
+}
+
+.social-link + .social-link {
+	margin-left: 1rem;
+}
+
+.social-link--fb {
+	background: url('../img/fb.svg') center;
+}
+
+.social-link--tw {
+	background: url('../img/tw.svg') center;
+}
+
+.social-link--im {
+	background: url('../img/instagramm.svg') center;
+}
+
+.copy {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 9.3vh;
+	border-top: 1px solid #bebebe;
+	font: 300 1.8rem nexa, sans-serif;
+	text-transform: uppercase;
+	color: #bebebe;
+}
+
+
+@media screen and (max-width: 1600px) {
+	html {
+		font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 984px) {
+	html {
+		font-size: 7px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	html {
+		font-size: 6px;
+	}
+}
+
+@media screen and (max-width: 750px) and (min-height: 450px) {
+	.image {
+		width: 23%;
+	}
+}
+
+@media screen and (max-width: 450px) and (min-height: 450px) {
+	.image {
+		width: 30%;
+	}
+}
+
+@media screen and (max-height: 450px){
+	.about__info {
+		padding: 3vh 0;
+	}
+	[id="about"] h2 {
+		font-size: 3rem;
+		line-height: 3.4rem;
+	}
+	[id="about"] p {
+		line-height: 2.6rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 5px;
+	}
+
+	h1, h2 {
+		font-size: 5rem;
+	}
+
+	.nav-link {
+		font-size: 2.2rem;
+	}
+
+	.about__info {
+		padding: 5vh 0;
+	}
+	[id="about"] h2 {
+		font-size: 4rem;
+		line-height: 6rem;
+	}
+	[id="about"] p {
+		line-height: 3rem;
+	}
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JWood</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!--[if lte IE 9]><script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script><![endif]-->
+	<div class="wrapper">
+		<section id="home" class="section-part">
+			<nav class="inner">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About me</a>
+				<a href="#portfolio" class="nav-link">Portfolio</a>
+				<a href="#contact" class="nav-link">Contact</a>
+			</nav>
+			<div class="logo inner">
+				<img src="img/Logo.svg" alt="logo-img">
+			</div>
+			<h1 class="inner">Jwood<span>photography</span></h1>
+			<div class="scroll-down inner">
+				<span class="scroll-down__text">scroll down to see more</span>
+				<a href="#about" class="chevron-bottom chevron-bottom--home"></a>
+			</div>
+		</section>
+		<section id="about" class="section-part">
+			<nav class="inner another-nav-style">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About me</a>
+				<a href="#portfolio" class="nav-link">Portfolio</a>
+				<a href="#contact" class="nav-link">Contact</a>
+			</nav>
+			<div class="about__info inner">
+				<div class="photo"></div>
+				<div class="about__text">
+					<h2>About Me</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<div class="name">Jason Wood</div>
+				</div>
+			</div>
+			<div class="scroll-down inner">
+				<span class="scroll-down__text">keep scrolling, there is still more to come.</span>
+				<a href="#portfolio" class="chevron-bottom"></a>
+			</div>
+		</section>
+		<section id="portfolio" class="section-part">
+			<nav class="inner another-nav-style">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About me</a>
+				<a href="#portfolio" class="nav-link">Portfolio</a>
+				<a href="#contact" class="nav-link">Contact</a>
+			</nav>
+			<h2 class="inner">Portfolio</h2>
+			<div class="photo-gallery">
+					<div class="image"><img src="img/portfolio-img-1.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-2.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-3.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-4.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-5.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-6.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-7.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-8.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-9.jpg" alt=""></div>
+					<div class="image"><img src="img/portfolio-img-10.jpg" alt=""></div>
+			</div>
+			<div class="scroll-down inner">
+				<span class="scroll-down__text">do you want to see it with your own eyes? Scroll!</span>
+				<a href="#contact" class="chevron-bottom"></a>
+			</div>
+		</section>
+		<section id="contact" class="section-part">
+			<nav class="inner another-nav-style">
+				<a href="#home" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About me</a>
+				<a href="#portfolio" class="nav-link">Portfolio</a>
+				<a href="#contact" class="nav-link">Contact</a>
+			</nav>
+			<dl class="contact__info inner">
+				<dt class="contact__name">mail:</dt>
+				<dd class="contact__description"><a href="mailto:Jason@wood.com">Jason@wood.com</a></dd>
+				<dt class="contact__name">phone:</dt>
+				<dd class="contact__description contact__description--phone"><a href="tel:+44 212 432 444">+44 212 432 444</a></dd>
+				<dt class="contact__name">social media:</dt>
+				<dd class="contact__description">
+					<a href="#" class="social-link social-link--fb"></a>
+					<a href="#" class="social-link social-link--tw"></a>
+					<a href="#" class="social-link social-link--im"></a>
+				</dd>
+			</dl>
+			<div class="copy inner">
+				DESIGNED by Pawel szymankiewicz
+			</div>
+		</section>
+	</div>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('a[href^="#"]').click(function () {
+    		var elementClick = $(this).attr("href");
+    		var destination = $(elementClick).offset().top;
+      	$('html, body').animate( { scrollTop: destination }, 400);
+    });
+ });
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: nexa;
+    src: url('../fonts/nexaLight/Nexa_Free_Light-webfont.eot');
+    src: url('../fonts/nexaLight/Nexa_Free_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexaLight/Nexa_Free_Light-webfont.woff2') format('woff2'),
+         url('../fonts/nexaLight/Nexa_Free_Light-webfont.woff') format('woff'),
+         url('../fonts/nexaLight/Nexa_Free_Light-webfont.ttf') format('truetype'),
+         url('../fonts/nexaLight/Nexa_Free_Light-webfont.svg#nexa') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: nexa;
+    src: url('../fonts/nexaBold/Nexa_Free_Bold-webfont.eot');
+    src: url('../fonts/nexaBold/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexaBold/Nexa_Free_Bold-webfont.woff2') format('woff2'),
+         url('../fonts/nexaBold/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('../fonts/nexaBold/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/nexaBold/Nexa_Free_Bold-webfont.svg#nexa') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'felt_tipregular';
+    src: url('../fonts/feltTip/fontpalace-free-felt-tip-roman-webfont.eot');
+    src: url('../fonts/feltTip/fontpalace-free-felt-tip-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/feltTip/fontpalace-free-felt-tip-roman-webfont.woff2') format('woff2'),
+         url('../fonts/feltTip/fontpalace-free-felt-tip-roman-webfont.woff') format('woff'),
+         url('../fonts/feltTip/fontpalace-free-felt-tip-roman-webfont.ttf') format('truetype'),
+         url('../fonts/feltTip/fontpalace-free-felt-tip-roman-webfont.svg#felt_tipregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
