@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header1</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header1/style.css">
+</head>
+<body>
+	<header class="header">
+		<nav class="header__menu js--menu">
+			<div class="logo"></div>
+			<div class="header__menu-navigation">
+				<a href="#" class="header__menu-link">Products</a>
+				<a href="#" class="header__menu-link">Prices</a>
+				<a href="#" class="header__menu-link">About Us</a>
+				<a href="#" class="header__menu-link">Contacts</a>
+				<span class="header__menu-navigation-btn js--menu-btn"></span>
+				<div class="header__dropdown-menu">
+					<a href="#" class="header__dropdown-menu-link">Products</a>
+					<a href="#" class="header__dropdown-menu-link">Prices</a>
+					<a href="#" class="header__dropdown-menu-link">About Us</a>
+					<a href="#" class="header__dropdown-menu-link">Contacts</a>
+				</div>
+			</div>
+		</nav>
+		<div class="header__text">
+			<h1 class="header__title">This soundted nonsense to Alice, so she said nothing, but set off at once toward the Red Queen.</h1>
+			<p class="header__paragraph">To her surprise, she lost sight of her in a moment, and found herself walking in at the front-door again.</p>
+		</div>
+	</header>
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 650) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 650) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			} 
+			if (w <= 450 && menu.parentNode.classList.contains('is-active')) {
+				if (!menu.classList.contains('create-close')) {
+					menu.classList.add('create-close');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

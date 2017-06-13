@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header4</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header4/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header__menu">
+			<div class="header__menu-btn js--menu-btn"></div>
+			<nav class="header__menu-navigation js--dropdown-menu">
+				<a href="#" class="header__menu-navigation-link">Products</a>
+				<a href="#" class="header__menu-navigation-link">Prices</a>
+				<a href="#" class="header__menu-navigation-link">About Us</a>
+				<a href="#" class="header__menu-navigation-link">Contacts</a>
+			</nav>
+			<div class="logo"></div>
+		</div>
+		<div class="phone-photo">
+			<img src="img/bg-phone.png" alt="phone" class="phone-photo__img">
+		</div>
+		<h2 class="header__title">This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such bstruse matters.</h2>
+		<a href="#" class="btn btn--round btn--success header__download-link">Download</a>
+	</div>
+
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 450) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+		
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 450) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			}
+		}
+	</script>
+</body>
+</html>

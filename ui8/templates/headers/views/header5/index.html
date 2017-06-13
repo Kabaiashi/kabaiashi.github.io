@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header5</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header5/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="btn--circle btn--circle-chevron btn--circle-chevron-left chevron-btn chevron-btn--left"></div>
+		<div class="btn--circle btn--circle-chevron btn--circle-chevron-right chevron-btn chevron-btn--right"></div>
+		<div class="carousel-dots">
+			<span class="carousel-dots__item is-active"></span>
+			<span class="carousel-dots__item"></span>
+			<span class="carousel-dots__item"></span>
+			<span class="carousel-dots__item"></span>
+		</div>
+		<div class="header__menu">
+			<div class="header__menu-btn js--menu-btn"></div>
+			<div class="logo"></div>
+			<nav class="header__menu-navigation js--dropdown-menu">
+				<a href="#" class="header__menu-navigation-link">Products</a>
+				<a href="#" class="header__menu-navigation-link">Prices</a>
+				<a href="#" class="header__menu-navigation-link">About Us</a>
+				<a href="#" class="header__menu-navigation-link">Contacts</a>
+			</nav>
+		</div>
+		<div class="header__text">
+			<h1 class="header__title">Carefully Crafted UI Design Assets</h1>
+			<p class="header__paragraph">The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady. His face brightened up, and he began to feel quite convivial.</p>
+		</div>
+		<a href="#" class="btn btn--lg btn--round btn--warning header__start-link">Let’s start!</a>
+	</header>
+
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 650) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 650) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			}
+		}
+	</script>
+</body>
+</html>

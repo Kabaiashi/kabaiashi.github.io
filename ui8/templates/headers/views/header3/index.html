@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header3</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header3/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header__menu">
+			<div class="logo"></div>
+			<nav class="header__menu-navigation">
+				<a href="#" class="header__menu-navigation-link">Products</a>
+				<a href="#" class="header__menu-navigation-link">Prices</a>
+				<a href="#" class="header__menu-navigation-link">About Us</a>
+				<a href="#" class="header__menu-navigation-link">Contacts</a>
+			</nav>
+			<div class="header__menu-btn js--menu-btn"></div>
+			<div class="header__menu-dropdown js--dropdown-menu">
+				<a href="#" class="header__menu-dropdown-link">Products</a>
+				<a href="#" class="header__menu-dropdown-link">Prices</a>
+				<a href="#" class="header__menu-dropdown-link">About Us</a>
+				<a href="#" class="header__menu-dropdown-link">Contacts</a>
+			</div>
+		</div>
+		<h1 class="header__title">It was some time before he obtained any answer, and the reply, when made, was unpropitious.</h1>
+		<form action="#">
+			<div class="signup-form">
+				<div class="signup-form__elem">
+					<input type="email" placeholder="E-mail" class="input-field">
+				</div>
+				<div class="signup-form__elem">
+					<input type="password" placeholder="Password" class="input-field">
+				</div>
+				<div class="signup-form__elem">
+					<button class="btn btn--rounded btn--info signup-form__btn">Sign up</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 450) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 450) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			}
+			if (w <= 450 && menu.parentNode.classList.contains('is-active')) {
+				if (!menu.classList.contains('create-close')) {
+					menu.classList.add('create-close');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

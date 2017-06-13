@@ -1,0 +1,104 @@
+@import '../../../settings/settings';
+@import '../../../components/inputs';
+@import '../../../components/buttons';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-stack;
+	letter-spacing: 0.02em;
+	font-weight: 400;
+	color: #FFF;
+}
+
+.footer {
+	padding: 50px 0 30px;
+	background-color: $green-color;
+	&__content {
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__title {
+		margin-bottom: 40px;
+		font-size: 50px;
+		line-height: 58px;
+		font-weight: 600;
+		@media (max-width: $mobile-size) {
+			font-size: 36px;
+		}
+	}
+	&__sign-up-text {
+		font-size: 16px;
+		line-height: 36px;
+	}
+	&__form {
+		@extend %border-radius;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		width: 70%;
+		margin: 15px auto 70px;
+		padding: 25px 10px;
+		background-color: $light-grey-color;
+		&-btn {
+			width: 100%;
+			min-width: 80px;
+		}
+		@media (max-width: $tablet-size) {
+			width: 90%;
+			padding: 15px 5px;
+		}
+		@media (max-width: $mobile-size) {
+			flex-direction: column;
+		}
+	}
+	&__input-group {
+		flex: 1 1 auto;
+		padding: 0 10px;
+		&--btn {
+			width: 25%;
+		}
+		&:last-child {
+			@media (max-width: $mobile-size) {
+				margin-bottom: 0;
+			}
+		}
+		@media (max-width: $mobile-size) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	&__copyright {
+		@include text-config(14px, 36px, rgba(255,255,255,.5));
+	}
+}
+
+.nav {
+	margin-bottom: 20px;
+	&__link {
+		font-size: 14px;
+		line-height: 24px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #FFF;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:not(:first-child) {
+			margin-left: 50px;
+			@media (max-width: $mobile-size) {
+				margin-left: 20px;
+			}
+		}
+		@media (max-width: $mobile-size) {
+			font-size: 12px;
+		}
+	}
+}

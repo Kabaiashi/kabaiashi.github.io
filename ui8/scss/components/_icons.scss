@@ -1,0 +1,183 @@
+.ic {
+	&--chevron {
+		position: relative;
+		&:after {
+			@include block-create(2px, 2px, currentColor);
+			content: "";
+			position: absolute;
+		}
+		&--left:after {
+			top: 50%;
+			left: -15px;
+			transform: translateY(-50%);
+			box-shadow: 1px 1px 0 0 currentColor,
+			2px 2px 0 0 currentColor,
+			3px 3px 0 0 currentColor,
+			4px 4px 0 0 currentColor,
+			1px -1px 0 0 currentColor,
+			2px -2px 0 0 currentColor,
+			3px -3px 0 0 currentColor,
+			4px -4px 0 0 currentColor;
+		}
+		&--right:after {
+			top: 50%;
+			right: -12px;
+			transform: translateY(-50%);
+			box-shadow: -1px 1px 0 0 currentColor,
+			-2px 2px 0 0 currentColor,
+			-3px 3px 0 0 currentColor,
+			-4px 4px 0 0 currentColor,
+			-1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor;
+		}
+		&--bottom:after {
+			top: calc(50% + 3px);
+			right: 20px;
+			transform: translateY(-50%);
+			box-shadow: 1px -1px 0 0 currentColor,
+			2px -2px 0 0 currentColor,
+			3px -3px 0 0 currentColor,
+			4px -4px 0 0 currentColor,
+			-1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor;
+		}
+	}
+	&--close {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		color: #FFF;
+		cursor: pointer;
+		&:after {
+			@include block-create(2px, 2px, currentColor);
+			@include pos('topLeft', 50%, 50%);
+			content: "";
+			transform: translate(-50%, -50%);
+			box-shadow: 1px -1px 0 0 currentColor,
+			2px -2px 0 0 currentColor,
+			3px -3px 0 0 currentColor,
+			4px -4px 0 0 currentColor,
+			1px 1px 0 0 currentColor,
+			2px 2px 0 0 currentColor,
+			3px 3px 0 0 currentColor,
+			4px 4px 0 0 currentColor,
+			-1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor,
+			-1px 1px 0 0 currentColor,
+			-2px 2px 0 0 currentColor,
+			-3px 3px 0 0 currentColor,
+			-4px 4px 0 0 currentColor;
+		}
+		&__circle {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: $grey-color;
+			color: #fff;
+			cursor: pointer;
+			:after {
+				box-shadow: 1px -1px 0 0 currentColor,
+			2px -2px 0 0 currentColor,
+			3px -3px 0 0 currentColor,
+			1px 1px 0 0 currentColor,
+			2px 2px 0 0 currentColor,
+			3px 3px 0 0 currentColor,
+			-1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-1px 1px 0 0 currentColor,
+			-2px 2px 0 0 currentColor,
+			-3px 3px 0 0 currentColor;
+			}
+		}
+	}
+	&--check {
+		position: absolute;
+		width: 14px;
+		height: 10px;
+		color: $green-color;
+		&:after {
+			@include block-create(2px, 3px, currentColor);
+			@include pos('topRight', 0, 0);
+			content: '';
+			box-shadow: -1px 1px 0 0 currentColor,
+			-2px 2px 0 0 currentColor,
+			-3px 3px 0 0 currentColor,
+			-4px 4px 0 0 currentColor,
+			-5px 5px 0 0 currentColor,
+			-6px 6px 0 0 currentColor,
+			-7px 7px 0 0 currentColor,
+			-8px 6px 0 0 currentColor,
+			-9px 5px 0 0 currentColor,
+			-10px 4px 0 0 currentColor,
+			-11px 3px 0 0 currentColor;
+		}
+	}
+	&--hamburger {
+		position: relative;
+		&:after {
+			@include block-create(18px, 2px, currentColor);
+			@include pos('topLeft', 50%, 50%);
+			content: "";
+			transform: translate(-50%, -50%);
+			box-shadow: 0 6px 0 0 currentColor,
+			0 -6px 0 0 currentColor;
+		}
+	}
+	&--search {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		color: #FFF;
+		&:after {
+			@include pos('topLeft', 0, 0);
+			content: '';
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			border: 2px solid currentColor;
+		}
+		&:before {
+			@include pos('bottomRight', 0, 0);
+			@include block-create(2px, 2px, currentColor);
+			content: "";
+			box-shadow: -1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor,
+			-5px -5px 0 0 currentColor;
+		}
+		&--sm {
+			width: 14px;
+			height: 14px;
+			&:after {
+				width: 11px;
+				height: 11px;
+			}
+			&:before {
+			box-shadow: -1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor;
+			}
+		}
+	}
+	&--grey {
+		color: $grey-color;
+	}
+	&--centered {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&--vertical-align {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}

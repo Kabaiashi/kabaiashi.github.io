@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navigation5</title>
+	<link rel="stylesheet" href="../../../../css/templates/navigations/nav5/style.css">
+</head>
+<body>
+	<nav class="nav">
+		<div class="container">
+			<a href="#" class="logo"></a>
+				<div class="search-box">
+					<label for="search-field" class="search-box__label js-btn">Search</label>
+					<div class="sticky-group search-box__form js-dropdown">
+						<form action="#">
+							<input type="search" id="search-field" class="input-field input-field--rounded input-field--ic--left sticky-group__field" required>
+							<button class="sticky-group__btn search-box__btn"><span class="ic--search ic--centered"></span></button>
+							<span class="ic--search ic--search--sm ic--vertical-align search-box__icon"></span>
+						</form>
+					</div>
+				</div>
+			<div class="nav__sign-links">
+				<a href="#" class="btn btn--round nav__sign-links-item nav__sign-links-item--in js-nav-link">Sign in</a>
+				<a href="#" class="btn btn--round nav__sign-links-item nav__sign-links-item--up is-active js-nav-link">Sign up</a>
+			</div>
+		</div>
+	</nav>
+
+	<script>
+		var navLink = document.querySelectorAll('.js-nav-link');
+		var btn = document.querySelector('.js-btn');
+		var menu = document.querySelector('.js-dropdown');
+
+		function clear(arr) {
+			arr.forEach(function (e) {
+				e.classList.remove('is-active');
+			});
+		}
+
+		navLink.forEach(function (link) {
+			link.addEventListener('click', function () {
+				clear(navLink);
+				this.classList.add('is-active');
+			});
+		});
+
+		btn.addEventListener('click', function () {
+			var w = document.body.clientWidth;
+			if (w <= 650) {
+				if (menu.hasAttribute('style')) {
+					menu.removeAttribute('style');
+				} else {
+					menu.style.display = 'block';
+				}
+			}
+		});
+
+		window.onresize = function() {
+			var w = document.body.clientWidth;
+			if (w > 650 && menu.hasAttribute('style')) {
+				menu.removeAttribute('style');	
+			}
+		}
+
+	</script>
+</body>
+</html>

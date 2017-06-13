@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header6</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header6/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header__menu">
+			<div class="header__menu-btn js--menu-btn">Menu</div>
+			<nav class="header__menu-links">
+				<a href="#" class="header__menu-link">Login</a>
+				<a href="#" class="header__menu-link">Sign Up</a>
+			</nav>
+			<div class="header__dropdown-menu">
+				<a href="#" class="header__dropdown-menu-link">Products</a>
+				<a href="#" class="header__dropdown-menu-link">Prices</a>
+				<a href="#" class="header__dropdown-menu-link">About Us</a>
+				<a href="#" class="header__dropdown-menu-link">Contacts</a>
+			</div>
+		</div>
+		<div class="logo"></div>
+		<form action="#">
+			<div class="search-form">
+				<label class="search-form__label" for="srch">Search</label>
+				<div class="search-form__field-group">
+					<input type="text" id="srch" class="input-field input-field--ic--left-sm search-form__input" placeholder="Search" required>
+					<button class="search-form__btn"><span class="ic--search ic--centered"></span></button>
+					<span class="ic--search ic--search--sm ic--vertical-align ic--grey search-icon"></span>
+				</div>
+			</div>
+		</form>
+		<span class="header__search-links">Popular searches: <a href="#">UI Kit</a>, <a href="#">Web Design</a>, <a href="#">Flat</a>, <a href="#">CreativeDash</a></span>
+		<p class="header__bottom-text">Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+	</div>
+
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 450) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 450) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			}
+			if (w <= 450 && menu.parentNode.classList.contains('is-active')) {
+				if (!menu.classList.contains('create-close')) {
+					menu.classList.add('create-close');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

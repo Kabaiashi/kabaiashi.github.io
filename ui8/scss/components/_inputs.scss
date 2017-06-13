@@ -1,0 +1,110 @@
+.input-field {
+	@extend %border-radius;
+	@include block-create(100%, 48px, #fff);
+	@include input-placeholder {
+		font-family: $font-stack;
+		color: $border-color;
+		letter-spacing: 0.02em;
+		font-weight: 600;
+	}
+	padding: 0 16px;
+	border: 2px solid $border-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+	font-weight: 600;
+	outline: none;
+	&--sm {
+		height: 36px;
+		padding: 0 16px;
+		font-size: 14px;
+	}
+	&--area {
+		@include text-config(16px, 22px);
+		height: 144px;
+		padding: 15px;
+		text-align: left;
+	}
+	&--split {
+		padding-right: 50px;
+		&--sm {
+			padding-right: 40px;
+		}
+	}
+	&--round {
+		border-radius: 999px;
+	}
+	&--ic {
+		padding: 0 40px 0 45px;
+
+		&--sm {
+			padding: 0 35px;
+		}
+		&--right {
+			padding: 0 30px 0 16px;
+		}
+		&--left {
+			padding: 0 10px 0 45px;
+			&-sm {
+				padding: 0 10px 0 35px;
+			}
+			@media (max-width: $mobileL-size) {
+				padding: 0 10px 0 40px;
+			}
+		}
+	}
+}
+
+.split-input {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	& > .input-field {
+		width: calc(100% - 58px);
+	}
+}
+
+.form-group {
+	&__label {
+		@include text-config(16px, 24px, $grey-color);
+	}
+	&__input,
+	&__select,
+	&__area {
+		margin-top: 5px;
+	}
+}
+
+.sticky-group {
+	position: relative;
+	&__field:valid {
+		width: calc(100% - 58px);
+	}
+	&__btn {
+		@include pos('topRight', 0, 0);
+		@include block-create(48px, 48px, $border-color);
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+		cursor: auto;
+		border:none;
+		outline: none;
+	}
+	&__field:valid + &__btn {
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		background-color: $green-color;
+		cursor: pointer;
+	}
+	&--sm {
+		&__field:valid {
+			width: calc(100% - 46px);
+		}
+		&__btn {
+			width: 36px;
+			height: 36px;
+		}
+	}
+}
+
+
+

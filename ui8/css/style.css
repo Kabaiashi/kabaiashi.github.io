@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,600");
+
+.template-link {
+  border-radius: 6px;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "icon-font";
+  src: url("../../../../fonts/icon/icon-font.eot");
+  src: url("../../../../fonts/icon/icon-font.?#iefix") format("embedded-opentype"), url("../../../../fonts/icon/icon-font.woff2") format("woff2"), url("../../../../fonts/icon/icon-font.woff") format("woff"), url("../../../../fonts/icon/icon-font.ttf") format("truetype"), url("../../../../fonts/icon/icon-font.#icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "icon-font";
+}
+
+.icon:before {
+  /* Some common icon stuff */
+}
+
+.icon.icon--basket:before {
+  content: "";
+}
+
+.icon.icon--dribbble:before {
+  content: "";
+}
+
+.icon.icon--envelope:before {
+  content: "";
+}
+
+.icon.icon--facebook:before {
+  content: "";
+}
+
+.icon.icon--google-plus:before {
+  content: "";
+}
+
+.icon.icon--linkedin:before {
+  content: "";
+}
+
+.icon.icon--padlock:before {
+  content: "";
+}
+
+.icon.icon--phone:before {
+  content: "";
+}
+
+.icon.icon--placeholder:before {
+  content: "";
+}
+
+.icon.icon--settings:before {
+  content: "";
+}
+
+.icon.icon--twitter:before {
+  content: "";
+}
+
+.icon.icon--upload-cloud:before {
+  content: "";
+}
+
+.icon.icon--vimeo:before {
+  content: "";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  background: #f2f5f8;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 10px;
+}
+
+.title {
+  top: 10px;
+  left: 50%;
+  position: absolute;
+  font-size: 30px;
+  line-height: 40px;
+  color: #383737;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #b4bbc2;
+}
+
+.template-link {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 0 5px 2px #383737;
+  box-shadow: 0 0 5px 2px #383737;
+}
+
+.template-link__name {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  font-size: 30px;
+  line-height: 70px;
+  color: #fff;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 6px 6px;
+  text-align: center;
+  display: none;
+}
+
+.template-link:hover {
+  -webkit-box-shadow: 0 0 7px 3px #383737;
+  box-shadow: 0 0 7px 3px #383737;
+}
+
+.template-link:hover > .template-link__name {
+  display: block;
+}
+
+.template-link--base {
+  background: url("../img/base.jpg");
+  background-size: cover;
+}
+
+.template-link--headers {
+  background: url("../img/headers.jpg");
+  background-size: cover;
+}
+
+.template-link--footers {
+  background: url("../img/footers.jpg");
+  background-size: cover;
+}
+
+.template-link--forms {
+  background: url("../img/forms.jpg");
+  background-size: cover;
+}
+
+.template-link--navigations {
+  background: url("../img/navigations.jpg");
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */

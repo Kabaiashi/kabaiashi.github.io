@@ -1,0 +1,91 @@
+@import '../../../settings/settings';
+@import '../../../icons/iconfont-varible';
+@import '../../../icons/iconfont-icons';
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: $font-stack;
+	letter-spacing: 0.02em;
+	font-weight: 400;
+}
+
+.footer {
+	padding-top: 30px;
+	padding-bottom: 15px;
+	background-color: $black-color;
+	text-align: center;
+	&__nav-link {
+		@include text-config(16px, 36px, #fff);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:not(:first-child) {
+			margin-left: 30px;
+			@media (max-width: $mobileL-size) {
+				margin-left: 0;
+			}
+		}
+		@media (max-width: $mobileL-size) {
+			display: block;
+		}
+	}
+	&__copyright {
+		@include text-config(14px, 36px, rgba(255,255,255,.5));
+	}
+}
+
+.social-nav {
+	margin: 25px 0;
+}
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	margin-right: 16px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 14px;
+	line-height: 36px;
+	color: #FFF;
+	text-decoration: none;
+	transition: 0.3s;
+	&:last-child {
+		margin-right: 0;
+	}
+	&--facebook {
+		background: $dark-blue-color;
+		&:hover {
+			background-color: #295185;
+		}
+	}
+	&--twitter {
+		background: $twitter-color;
+		&:hover {
+			background-color: #1D86B4;
+		}
+	}
+	&--dribbble {
+		background: $dribbble-color;
+		&:hover {
+			background-color: #BE428E;
+		}
+	}
+	&--vimeo {
+		background: $vimeo-color;
+		&:hover {
+			background-color: #2C7A93;
+		}
+	}
+	&--google-plus {
+		background: $google-plus-color;
+		&:hover {
+			background-color: #C3504D;
+		}
+	}
+}

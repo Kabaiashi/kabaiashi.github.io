@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header8</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header8/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__menu">
+			<div class="header__menu-nav-wrap">
+				<div class="logo"></div>
+				<div class="header__menu-btn js--menu-btn"></div>
+				<nav class="header__menu-navigation js--dropdown-menu">
+					<a href="#" class="header__menu-navigation-link">Home</a>
+					<a href="#" class="header__menu-navigation-link">Portfolio</a>
+					<a href="#" class="header__menu-navigation-link">Products</a>
+					<a href="#" class="header__menu-navigation-link">Services</a>
+					<a href="#" class="header__menu-navigation-link">About Us</a>
+					<a href="#" class="header__menu-navigation-link">Contact</a>
+				</nav>
+			</div>
+			<div class="header__search">
+				<form action="#">
+					<input type="text" class="input-field input-field--sm input-field--round header__search-input" placeholder="Search" required>
+					<span class="ic--search ic--search--sm ic--vertical-align ic--grey header__search-icon"></span>
+				</form>
+			</div>
+		</div>
+		<h1 class="header__title">we make products</h1>
+		<a href="#" class="btn btn--lg btn--round btn--danger header__order-btn">Order</a>
+		<div class="header__paragraph">
+			<div class="header__paragraph-item">
+				<span class="header__paragraph-icon header__paragraph-icon--pencil"></span>
+				<h3 class="header__paragraph-title">Prototype</h3>
+				<p class="header__paragraph-text">This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.</p>
+			</div>
+			<div class="header__paragraph-item">
+				<span class="header__paragraph-icon header__paragraph-icon--brush"></span>
+				<h3 class="header__paragraph-title">Design</h3>
+				<p class="header__paragraph-text">It was some time before he obtained any answer, and the reply, when made, was unpropitious.</p>
+			</div>
+			<div class="header__paragraph-item">
+				<span class="header__paragraph-icon header__paragraph-icon--keyboard"></span>
+				<h3 class="header__paragraph-title">Coding</h3>
+				<p class="header__paragraph-text">Thus much I thought proper to tell you in relation to yourself, and to the trust I reposed in you.</p>
+			</div>
+		</div>
+	</header>
+
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 450) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 450) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			}
+			if (w <= 450 && menu.parentNode.classList.contains('is-active')) {
+				if (!menu.classList.contains('create-close')) {
+					menu.classList.add('create-close');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

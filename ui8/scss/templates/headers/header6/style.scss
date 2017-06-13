@@ -1,0 +1,221 @@
+@import '../../../settings/settings';
+@import '../../../components/inputs';
+@import '../../../components/icons';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-stack;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: $black-color;
+}
+
+.logo {
+	@include block-create(71px, 66px, url('../../../../img/logo.svg'));
+	margin: 12vh auto 10vh;
+	background-size: cover;
+	@media (max-height: $mobile-size) {
+		margin-top: 5vh;
+	}
+}
+
+.header {
+	height: 100vh;
+	padding: 8vh 10%;
+	background-color: $light-grey-color;
+	text-align: center;
+	&__menu {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		&.is-active > .header__dropdown-menu {
+			display: block;
+		}
+		&-btn {
+			@include text-config(16px, 14px);
+			position: relative;
+			padding-left: 30px;
+			height: 14px;
+			cursor: pointer;
+			&:after {
+				@include pos('topLeft', 50%, 0);
+				@include block-create(18px, 2px, currentColor);
+				content: "";
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				box-shadow: 0 6px 0 0 currentColor,
+				0 -6px 0 0 currentColor;
+			}
+			&.create-close {
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				z-index: 5;
+				text-indent: -9999px;
+				color: #FFF;
+				&:after {
+					box-shadow: none;
+					transform: translateY(-50%) rotate(45deg);
+				}
+				&:before {
+					@include pos('topLeft', 50%, 0);
+					@include block-create(18px, 2px, currentColor);
+					content: "";
+					transform: translateY(-50%) rotate(-45deg);
+				}
+			}
+			@media (max-width: $mobile-size) {
+				position: absolute;
+				top: 40px;
+				left: 20px;
+			}
+		}
+		&-link {
+			@include text-config(16px, 24px);
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+			&:not(:first-child) {
+				margin-left: 30px;
+			}
+		}
+		@media (max-width: $mobile-size) {
+			position: static;
+			-webkit-justify-content: flex-end;
+			        justify-content: flex-end;
+		}
+	}
+	&__dropdown-menu {
+		@include pos('topLeft', 100%, 0);
+		z-index: 3;
+		display: none;
+		width: 200px;
+		&-link {
+			@include text-config(16px, 40px, $black-color);
+			display: block;
+			padding-left: 30px;
+			border: 1px solid #fff;
+			text-align: left;
+			text-decoration: none;
+			-webkit-transition: 0.2s;
+			transition: 0.2s;
+			&:hover {
+				border-color: $green-color;
+				color: $green-color;
+			}
+			@media (max-width: $mobile-size) {
+				padding-left: 0;
+				text-align: center;
+				line-height: 70px;
+				color: #FFF;
+				text-transform: uppercase;
+				border-color: transparent;
+			}
+		}
+		@media (max-width: $mobile-size) {
+			top: 0;
+			right: 0;
+			width: auto;
+			background-color: rgba(0,0,0,.9);
+		}
+	}
+	&__search-links {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 400;
+		& > a {
+			color: $green-color;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__bottom-text {
+		@include text-config(14px, 20px, $grey-color);
+		margin-top: 32vh;
+		font-weight: 400;
+		@media (max-width: $mobile-size) {
+			margin-top: 20vh;
+		}
+		@media (max-height: $mobile-size) {
+			margin-top: 10vh;
+			line-height: 18px;
+		}
+		@media (max-width: $mobileS-size) {
+			font-size: 13px;
+			line-height: 16px;
+		}
+	}
+	@media (max-width: $mobile-size) {
+		padding: 5vh 5%;
+	}
+	@media (max-height: $mobile-size) {
+		padding: 5vh 5%;
+	}
+}
+
+.search-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 60%;
+	margin: 0 auto 5vh;
+	&__label {
+		@include text-config(16px, 36px, $grey-color);
+		margin-right: 16px;
+	}
+	&__field-group {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+	}
+	&__input {
+		&:valid {
+			width: calc(100% - 58px);
+		}
+		&:valid + .search-form__btn {
+			border-top-left-radius: 6px;
+			border-bottom-left-radius: 6px;
+			background-color: $green-color;
+			cursor: pointer;
+		}
+	}
+	&__btn {
+		@include pos('topRight', 0, 0);
+		@include block-create(48px, 48px, $border-color);
+		border: none;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+		outline: none;
+	}
+	@media (max-width: $tablet-size) {
+		width: 80%;
+	}
+	@media (max-width: $mobile-size) {
+		width: 100%;
+	}
+}
+
+.search-icon {
+	left: 15px;
+	pointer-events: none;
+}
+

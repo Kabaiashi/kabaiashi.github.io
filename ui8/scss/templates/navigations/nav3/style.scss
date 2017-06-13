@@ -1,0 +1,95 @@
+@import '../../../settings/normalize';
+@import '../../../settings/settings';
+@import '../../../components/inputs';
+@import '../../../components/icons';
+
+.container {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	max-width: 960px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.logo {
+	@include block-create(43px, 40px, url('../../../../img/logo.svg') no-repeat);
+	display: block;
+}
+
+.nav {
+	position: relative;
+	padding: 16px 0;
+	background-color: $light-grey-color;
+	font-family: $font-stack;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	&__main {
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		width: 72%;
+		padding: 0 10px;
+		&-link {
+			@include text-config(16px, 36px);
+			text-decoration: none;
+			transition-duration: 0.2s;
+			&:hover {
+				color: $blue-color;
+				@include media('wTablet') {
+					color: $white-color;
+					background-color: $blue-color;
+				}
+			}
+			&.is-active {
+				color: $blue-color;
+				@include media('wTablet') {
+					color: $white-color;
+					background-color: $blue-color;
+				}
+			}
+			@include media('wTablet') {
+				display: block;
+				text-align: center;
+				line-height: 50px;
+				text-transform: uppercase;
+			}
+		}
+		@include media('wTablet') {
+			@include pos('topLeft', 100%, 0);
+			right: 0;
+			flex-direction: column;
+			display: none;
+			width: 100%;
+			padding: 0;
+			background-color: $light-grey-color;
+		}
+	}
+}
+
+.search-box {
+	position: relative;
+	width: 160px;
+	&__icon {
+		left: 13px;
+		pointer-events: none;
+	}
+	@include media('wTablet') {
+		width: 300px;
+	}
+	@include media('wMobile') {
+		width: 65%;
+	}
+}
+
+.ic--hamburger {
+	position: absolute;
+	left: 80px;
+	display: none;
+	cursor: pointer;
+	@include media('wTablet') {
+		display: block;
+	}
+}

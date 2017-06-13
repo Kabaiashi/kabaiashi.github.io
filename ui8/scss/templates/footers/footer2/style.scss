@@ -1,0 +1,139 @@
+@import '../../../settings/settings';
+@import '../../../icons/iconfont-varible';
+@import '../../../icons/iconfont-icons';
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: $font-stack;
+	letter-spacing: 0.02em;
+	color: $black-color;
+	font-weight: 600;
+}
+
+ul {
+	list-style: none;
+}
+
+.footer {
+	padding: 50px 0;
+	background-color: $light-grey-color;
+	&__content {
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		max-width: 960px;
+		margin: 0 auto;
+		&-title {
+			margin-bottom: 12px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+		&-paragraph {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		&-other-link {
+			@include text-config(16px, 36px, $blue-color);
+			text-decoration: none;
+			&:first-child {
+				margin-right: 30px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		@media (max-width: $mobileL-size) {
+			flex-direction: column;
+		}
+	}
+	&__part {
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		padding: 10px;
+		&--nav {
+			display: flex;
+			-webkit-justify-content: flex-end;
+			justify-content: flex-end;
+			&-list {
+				width: 160px;
+				@media (max-width: $tablet-size) {
+					width: 120px;
+				}
+				&-title {
+					font-size: 16px;
+					line-height: 36px;
+				}
+				&-link {
+					@include text-config(16px, 32px, $grey-color);
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			@media (max-width: $mobileL-size) {
+				-webkit-justify-content: space-around;
+				        justify-content: space-around;
+			}
+		}
+	}
+}
+
+.follow-links {
+	margin: 30px 0;
+	&__item {
+		@extend %border-radius;
+		display: inline-block;
+		vertical-align: middle;
+		min-width: 55px;
+		margin-right: 8px;
+		padding: 0 10px;
+		text-align: right;
+		color: #FFF;
+		font-size: 14px;
+		line-height: 28px;
+		text-decoration: none;
+		transition: 0.2s;
+		&:last-child {
+			margin-right: 0;
+		}
+		&--fb {
+			padding-left: 5px;
+			background: $dark-blue-color;
+			&:hover {
+				background-color: #2B548A;
+			}
+		}
+		&--tw {
+			background: $twitter-color;
+			&:hover {
+				background-color: #1E8AB9;
+			}
+		}
+		&--db {
+			background: $dribbble-color;
+			&:hover {
+				background-color: #AA4282;
+			}
+		}
+		&--in {
+			background: $linked-in-color;
+			&:hover {
+				background-color: #275DA4;
+			}
+		}
+	}
+}
+
+.icon {
+	font-weight: 400;
+	float: left;
+	&--linkedin {
+		margin-top: -1px;
+	}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navigation2</title>
+	<link rel="stylesheet" href="../../../../css/templates/navigations/nav2/style.css">
+</head>
+<body>
+	<nav class="nav">
+		<div class="container">
+			<div class="nav__main">
+				<div class="nav__btn ic--hamburger js-btn"></div>
+				<div class="nav__links js-dropdown">
+					<a href="#" class="nav__links-item js-nav-link">Activity</a>
+					<a href="#" class="nav__links-item is-active js-nav-link">Discover</a>
+					<a href="#" class="nav__links-item js-nav-link">Portfolio</a>
+					<a href="#" class="nav__links-item js-nav-link">Jobs</a>
+				</div>
+			</div>
+			<div class="nav__form-box">
+				<div class="search-box">
+					<input type="search" class="input-field input-field--sm input-field--round input-field--ic--left-sm search-box__field" placeholder="Search">
+					<span class="ic--search ic--search--sm ic--vertical-align search-box__ic"></span>
+				</div>
+				<a href="#" class="account-photo"></a>
+			</div>
+		</div>
+	</nav>
+
+	<script>
+		var navLink = document.querySelectorAll('.js-nav-link');
+		var btn = document.querySelector('.js-btn');
+		var menu = document.querySelector('.js-dropdown');
+
+		function clear(arr) {
+			arr.forEach(function (e) {
+				e.classList.remove('is-active');
+			});
+		}
+
+		navLink.forEach(function (link) {
+			link.addEventListener('click', function () {
+				clear(navLink);
+				this.classList.add('is-active');
+			});
+		});
+		
+		btn.addEventListener('click', function () {
+			var w = document.body.clientWidth;
+			if (w <= 650) {
+				if (menu.hasAttribute('style')) {
+					menu.removeAttribute('style');
+				} else {
+					menu.style.display = 'block';
+				}
+			}
+		});
+
+		window.onresize = function() {
+			var w = document.body.clientWidth;
+			if (w > 650 && menu.hasAttribute('style')) {
+				menu.removeAttribute('style');	
+			}
+		}
+
+	</script>
+</body>
+</html>

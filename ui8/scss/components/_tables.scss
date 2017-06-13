@@ -1,0 +1,20 @@
+.tbl {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: $font-stack;
+	font-weight: 600;
+	&:last-child > .tbl__cell {
+		border-bottom: none;
+	}
+	&__cell {
+		padding: 0 14px;
+		border-top: 1px solid $steps-color;
+		border-bottom: 1px solid $steps-color;
+		&--title {
+			border-top: none;
+			text-align: left;
+			font-size: 14px;
+			color: $grey-color;
+		}
+	}
+}

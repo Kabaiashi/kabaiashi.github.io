@@ -1,0 +1,132 @@
+@import '../../../settings/normalize';
+@import '../../../settings/settings';
+@import '../../../components/icons';
+@import '../../../components/buttons';
+@import '../../../icons/iconfont-varible';
+@import '../../../icons/iconfont-icons';
+
+.container {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	max-width: 960px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.nav {
+	position: relative;
+	padding: 24px 0;
+	background-color: $light-grey-color;
+	font-family: $font-stack;
+	font-weight: 600;
+	color: $black-color;
+	letter-spacing: 0.02em;
+	&__main {
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	&__links {
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 40px;
+			&--info {
+				@include text-config(16px, 24px);
+				border-bottom: 2px solid transparent;
+				text-decoration: none;
+				transition-duration: 0.2s;
+				&:hover {
+					border-color: $blue-color;
+					@include media('wTablet') {
+						background-color: $blue-color;
+						color: $white-color;
+					}
+				}
+				&.is-active {
+					border-color: $blue-color;
+					@include media('wTablet') {
+						background-color: $blue-color;
+						color: $white-color;
+					}
+				}
+				@include media('wTablet') {
+					text-align: center;
+					border-top: 1px solid $white-color;
+					border-bottom: 1px solid $white-color;
+					line-height: 36px;
+				}
+			}
+			&--add {
+				min-width: 116px;
+				@include media('wTablet') {
+					border-radius: 0;
+				}
+			}
+			@include media('wLaptop') {
+				margin-left: 16px;
+			}
+			@include media('wTablet') {
+				display: block;
+				margin: 0;
+			}
+		}
+		@include media('wTablet') {
+			@include pos('topLeft', 100%, 0);
+			right: 0;
+			display: none;
+			background-color: $light-grey-color;
+		}
+	}
+	&__user {
+		&-settings {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 18px;
+			font-size: 18px;
+			cursor: pointer;
+			transition-duration: 0.3s;
+			&:hover {
+				transform: rotate(360deg);
+			}
+		}
+		&-info {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-photo {
+			@include block-create(48px, 48px, url('../../../../templates/navigations/views/nav6/img/photo.jpg') center);
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 18px;
+			border-radius: 50%;
+			-webkit-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&-more {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-name {
+			@include text-config(16px, 22px);
+			display: block;
+		}
+		&-logout {
+			@include text-config(16px, 22px, $grey-color);
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.dropdown-btn {
+	width: 18px;
+	height: 14px;
+	cursor: pointer;
+}

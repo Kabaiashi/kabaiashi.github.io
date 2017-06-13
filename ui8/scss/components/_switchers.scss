@@ -1,0 +1,82 @@
+.switcher-outline {
+	display: none;
+	&:checked + label {
+		border-color: $green-color;
+		color: $green-color;
+		&:before {
+			left: 38px;
+		}
+		&:after {
+			content: 'On';
+			right: 38px;
+		}
+	}
+	&~label {
+		position: relative;
+		display: block;
+		width: 72px;
+		height: 36px;
+		margin-bottom: 20px;
+		border-radius: 18px;
+		border: 2px solid $grey-color; 
+		color: $grey-color;
+		cursor: pointer;
+		&:before {
+			@include block-create(28px, 28px, currentColor);
+			@include pos('topLeft', 50%, 2px);
+			content: '';
+			border-radius: 50%;
+			transform: translateY(-50%);
+			transition: 0.2s;
+		}
+		&:after {
+			@include pos('topRight', 50%, 10px);
+			content: 'Off';
+			font-family: $font-stack;
+			font-size: 14px;
+			font-weight: 600;
+			transform: translateY(-50%);
+			transition: 0.2s;
+		}
+	}
+}
+
+.switcher-filled {
+	display: none;
+	&:checked + label {
+		background-color: $green-color;
+		&:before {
+			left: 40px;
+		}
+		&:after {
+			content: 'On';
+			right: 40px;
+		}
+	}
+	&~label {
+		@include block-create(72px, 36px, $grey-color);
+		position: relative;
+		display: block;
+		margin-bottom: 20px;
+		border-radius: 18px;
+		color: #fff;
+		cursor: pointer;
+		&:before {
+			@include block-create(28px, 28px, currentColor);
+			@include pos('topLeft', 50%, 4px);
+			content: '';
+			border-radius: 50%;
+			transform: translateY(-50%);
+			transition: 0.2s;
+		}
+		&:after {
+			@include pos('topRight', 50%, 10px);
+			content: 'Off';
+			font-family: $font-stack;
+			font-size: 14px;
+			font-weight: 600;
+			transform: translateY(-50%);
+			transition: 0.2s;
+		}
+	}
+}

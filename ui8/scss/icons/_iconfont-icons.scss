@@ -1,0 +1,85 @@
+$global-font-icon: 'icon-font';
+
+@font-face {
+	font-family: $global-font-icon;
+	src:url("../../../../fonts/icon/icon-font.eot");
+	src:url("../../../../fonts/icon/icon-font.?#iefix") format("embedded-opentype"),
+	url("../../../../fonts/icon/icon-font.woff2") format("woff2"),
+	url("../../../../fonts/icon/icon-font.woff") format("woff"),
+	url("../../../../fonts/icon/icon-font.ttf") format("truetype"),
+	url("../../../../fonts/icon/icon-font.#icon-font") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.icon {
+	font-family: $global-font-icon;
+	&:before {
+   /* Some common icon stuff */
+ }
+ 
+ 	&.icon--basket {
+ 		&:before {
+ 			content: $icon-basket;
+ 		}
+ 	}
+ 	&.icon--dribbble {
+ 		&:before {
+ 			content: $icon-dribbble;
+ 		}
+ 	}
+ 	&.icon--envelope {
+ 		&:before {
+ 			content: $icon-envelope;
+ 		}
+ 	}
+ 	&.icon--facebook {
+ 		&:before {
+ 			content: $icon-facebook;
+ 		}
+ 	}
+ 	&.icon--google-plus {
+ 		&:before {
+ 			content: $icon-google-plus;
+ 		}
+ 	}
+ 	&.icon--linkedin {
+ 		&:before {
+ 			content: $icon-linkedin;
+ 		}
+ 	}
+ 	&.icon--padlock {
+ 		&:before {
+ 			content: $icon-padlock;
+ 		}
+ 	}
+ 	&.icon--phone {
+ 		&:before {
+ 			content: $icon-phone;
+ 		}
+ 	}
+ 	&.icon--placeholder {
+ 		&:before {
+ 			content: $icon-placeholder;
+ 		}
+ 	}
+ 	&.icon--settings {
+ 		&:before {
+ 			content: $icon-settings;
+ 		}
+ 	}
+ 	&.icon--twitter {
+ 		&:before {
+ 			content: $icon-twitter;
+ 		}
+ 	}
+ 	&.icon--upload-cloud {
+ 		&:before {
+ 			content: $icon-upload-cloud;
+ 		}
+ 	}
+ 	&.icon--vimeo {
+ 		&:before {
+ 			content: $icon-vimeo;
+ 		}
+ 	}
+}

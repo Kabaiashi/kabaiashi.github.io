@@ -1,0 +1,114 @@
+@import '../../../settings/normalize';
+@import '../../../settings/settings';
+@import '../../../components/inputs';
+@import '../../../components/icons';
+
+.container {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	max-width: 960px; 
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.nav {
+	position: relative;
+	background-color: $black-color;
+	font-family: $font-stack;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: $white-color;
+	&__main {
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	&__btn {
+		width: 18px;
+		height: 14px;
+		margin-right: 28px;
+		cursor: pointer;
+		@include media('wTablet') {
+			margin-right: 18px;
+		}
+	}
+	&__links {
+		display: flex;
+		&-item {
+			@include text-config(16px, 72px, $white-color);
+			display: block;
+			padding: 0 32px;
+			border-left: 1px solid;
+			border-right: 1px solid;
+			text-decoration: none;
+			border-color: rgba(0,0,0,.5);
+			-webkit-transition-duration: 0.3s;
+			-moz-transition-duration: 0.3s;
+			-ms-transition-duration: 0.3s;
+			-o-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+			&:hover {
+				background-color: rgba(255,255,255,.1);
+			}
+			&:first-child {
+				border-left-width: 2px;
+			}
+			&:last-child {
+				border-right-width: 2px;
+			}
+			&.is-active {
+				background-color: $orange-color;
+				border-color: $orange-color;
+			}
+			@include media('wTablet') {
+				padding: 0 18px; 
+			}
+			@include media('wMobileL') {
+				border: none;
+			}
+		}
+		@include media('wMobileL') {
+			@include pos('topLeft', 100%, 0);
+			right: 0;
+			display: none;
+			flex-direction: column;
+			background-color: rgba(0,0,0,.8);
+		}
+	}
+	@include media('wMobileL') {
+		padding: 18px 0;
+	}
+}
+
+.search-box {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 160px;
+	margin-right: 8px;
+	&__field {
+		@include input-placeholder {
+			color: rgba(255,255,255,.3);
+		}
+		border: none;
+		background-color: #2A2A2A;
+	}
+	&__ic {
+		left: 13px;
+		color: #6a6a6a;
+		pointer-events: none;
+	}
+}
+
+.account-photo {
+	@include block-create(36px, 36px, url('../../../../templates/navigations/views/nav2/img/photo.jpg') center no-repeat);
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

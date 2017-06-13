@@ -1,0 +1,119 @@
+@import '../../../settings/normalize';
+@import '../../../settings/settings';
+@import '../../../components/inputs';
+@import '../../../components/buttons';
+@import '../../../components/icons';
+
+
+.container {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	max-width: 960px; 
+	margin: 0 auto;
+	padding: 0 15px;
+	@include media('wMobile') {
+		padding: 0 10px;
+	}
+}
+
+.nav {
+	position: relative;
+	padding: 18px 0;
+	background-color: $black-color;
+	font-family: $font-stack;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: #FFF;
+	&__main {
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+
+	}
+	&__btn {
+		width: 18px;
+		height: 14px;
+		margin-right: 15px;
+		cursor: pointer;
+		@include media('wTablet') {
+			margin-right: 5px;
+		}
+	}
+	&__links {
+		&-item {
+			min-width: auto;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin: 0 4px;
+			-webkit-transition-duration: 0.3s;
+			-moz-transition-duration: 0.3s;
+			-ms-transition-duration: 0.3s;
+			-o-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+			&:hover {
+				background-color: $green-color;
+			}
+			&.is-active {
+				background-color: $green-color;
+				padding-left: 23px;
+				padding-right: 23px;
+				margin: 0 11px;
+				@include media('wTablet') {
+					padding-left: 12px;
+					padding-right:12px;
+					margin: 0 5px;
+				}
+				@include media('wMobileL') { 
+					margin: 0;
+					padding: 0;
+				}
+			}
+			@include media('wTablet') {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+			@include media('wMobileL') { 
+				display: block;
+				border-radius: 0;
+				margin: 0;
+				padding: 0;
+				line-height: 40px;
+				text-transform: uppercase;
+			}
+		}
+		@include media('wMobileL') { 
+			@include pos('topLeft', 100%, 0);
+			right: 0;
+			background-color: rgba(0,0,0,.8);
+			display: none;
+		}
+	}
+	&__sign-btn {
+		min-width: 98px;
+		margin-right: 8px;
+		text-indent: -5px;
+		&:after {
+			right: 16px;
+		}
+	}
+}
+
+.search-box {
+	position: relative;
+	display: inline-block;
+	width: 160px;
+	&__field {
+		@include input-placeholder {
+			color: rgba(255,255,255,.3);
+		}
+		border: none;
+		background-color: #2A2A2A;
+	}
+	&__ic {
+		left: 13px;
+		color: #686868;
+		pointer-events: none;
+	}
+}
+

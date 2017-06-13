@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Header7</title>
+	<link rel="stylesheet" href="../../../../css/templates/headers/header7/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header__menu">
+			<div class="header__menu-btn js--menu-btn"></div>
+			<div class="logo"></div>
+			<nav class="header__menu-navigation js--dropdown-menu">
+				<a href="#" class="header__menu-navigation-link">Products</a>
+				<a href="#" class="header__menu-navigation-link">Prices</a>
+				<a href="#" class="header__menu-navigation-link">About Us</a>
+				<a href="#" class="header__menu-navigation-link">Contacts</a>
+			</nav>
+		</div>
+		<h1 class="header__title">Take Your UI Design To A Whole New Level</h1>
+		<p class="header__paragraph">For good, too; though, in consequence of my previous emotions, I was still occasionally seized with a stormy sob. After we had jogged on for some little time, I asked the carrier if he was going all the way.</p>
+		<div class="header__info">
+			<div class="header__info-item">
+				<span class="header__info-counter header__info-counter--elements">1000</span>
+				<span class="header__info-desc">UI <br>Elements</span>
+			</div>
+			<div class="header__info-item">
+				<span class="header__info-counter header__info-counter--templates">200</span>
+				<span class="header__info-desc">Basic <br>Templates</span>
+			</div>
+			<div class="header__info-item">
+				<span class="header__info-counter header__info-counter--icons">100</span>
+				<span class="header__info-desc">Unique <br>Icons</span>
+			</div>
+		</div>
+		<div class="btn--circle btn--circle-chevron btn--circle-chevron-down header__chevron-bottom"></div>
+	</div>
+
+	<script src="../../js/dropdown.js"></script>
+	<script>
+		var menu = document.querySelector('.js--menu-btn');
+
+		menu.addEventListener('click', function () {
+			if (document.body.clientWidth <= 650) {
+				if (!this.classList.contains('create-close')) {
+					this.classList.add('create-close');
+				} else {
+					this.classList.remove('create-close');
+				}
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 650) {
+				menu.parentNode.classList.remove('is-active');
+				menu.classList.remove('create-close');
+			}
+		}
+	</script>
+</body>
+</html>

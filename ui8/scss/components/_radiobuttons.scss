@@ -1,0 +1,77 @@
+.r-btn {
+	display: none;
+	&:checked + label > &__changer {
+		&:after {
+			display: block;
+		}
+	}
+	&__changer {
+		@include pos('topLeft', 50%, -25px);
+		@include block-create(14px, 14px, $border-color);
+		border-radius: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		&:after {
+			@include block-create(10px, 10px, $blue-color);
+			@include pos('topLeft', 50%, 50%);
+			content: '';
+			display: none;
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__label {
+		@include text-config(14px, 24px, $grey-color);
+		position: relative;
+		left: 25px;
+		font-family: $font-stack;
+		letter-spacing: 0.02em;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}
+
+.radio-btn {
+	display: none;
+	&:checked + label:after {
+		display: block;
+	}
+	&__label {
+		@include block-create(16px, 16px, $black-color);
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 5px;
+		border-radius: 50%;
+		color: #FFF;
+		cursor: pointer;
+		&:after {
+			@include block-create(2px, 2px, currentColor);
+			@include pos('topLeft', 50%, 50%);
+			content: "";
+			display: none;
+			transform: translate(calc(-50% - 1px), calc(-50% + 2px));
+			box-shadow: 1px -1px 0 0 currentColor,
+			2px -2px 0 0 currentColor,
+			3px -3px 0 0 currentColor,
+			4px -4px 0 0 currentColor,
+			-1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor;
+		}
+	}
+	&--success {
+		background-color: $green-color;
+	}
+	&--danger {
+		background-color: $red-color;
+	}
+	&--warning {
+		background-color: $orange-color;
+	}
+	&--info {
+		background-color: $blue-color;
+	}
+	&--brown {
+		background-color: #865447;
+	}
+}

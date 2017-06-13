@@ -1,0 +1,15 @@
+@import '../../settings/normalize';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-link {
+	display: block;
+	margin: 10px;
+	img {
+		max-width: 100%;
+	}
+}

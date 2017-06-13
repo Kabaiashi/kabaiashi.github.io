@@ -1,0 +1,192 @@
+@import '../../../settings/settings';
+@import '../../../components/buttons';
+@import '../../../components/inputs';
+@import '../../../icons/iconfont-varible';
+@import '../../../icons/iconfont-icons';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-stack;
+	letter-spacing: 0.02em;
+	color: $black-color;
+	font-weight: 600;
+}
+
+ul {
+	list-style: none;
+}
+
+[type="email"] {
+	border: none;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.logo {
+	@include block-create(71px, 66px, url('../../../../img/logo.svg'));
+	margin-top: 10px;
+	@media (max-width: $mobileL-size) {
+		margin: 20px auto;
+	}
+}
+
+.footer__head {
+	padding: 36px 10px;
+	background-color: $green-color;
+	&-container {
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		@media (max-width: $mobile-size) {
+			flex-direction: column;
+		}
+	}
+	&-label {
+		@include text-config(16px, 36px, #fff);
+		@media (max-width: $mobileL-size) {
+			display: none;
+		} 
+	}
+	&-input {
+		position: relative;
+		width: 34%;
+		margin: 0 20px 0 15px;
+		@media (max-width: $mobileL-size) {
+			width: 60%;
+		}
+		@media (max-width: $mobile-size) {
+			width: 90%;
+			margin-bottom: 10px;
+		}
+	}
+	&-btn {
+		width: 18%;
+		@media (max-width: $mobileL-size) {
+			width: 30%;
+		}
+		@media (max-width: $mobile-size) {
+			width: 90%;
+		}
+	}
+}
+
+.icon--envelope {
+	@include pos('topLeft', 50%, 16px);
+	font-size: 20px;
+	font-weight: 400;
+	color: $orange-color;
+	transform: translateY(-50%);
+	pointer-events: none;
+	@media (max-width: $mobileL-size) {
+		left: 10px;
+	}
+}
+
+.footer__content {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	@media (max-width: $mobileL-size) {
+		display: block;
+		overflow: hidden;
+	}
+}
+
+.footer__body {
+	padding: 48px 10px;
+	background-color: $light-grey-color;
+	&-part {
+		padding: 5px;
+		&--logo {
+			width: 15%;
+		}
+		&--nav {
+			width: 20%;
+			@media (max-width: $mobileL-size) {
+				margin-bottom: 30px;
+				padding-left: 50px;
+			}
+		}
+		&-title {
+			font-size: 16px;
+			line-height: 36px;
+		}
+		&--map {
+			@extend %border-radius;
+			@include block-create(35%, auto, $green-color url('../../../../templates/footers/views/footer5/img/map.jpg') center);
+			position: relative;
+			cursor: pointer;
+			@media (max-width: $mobileL-size) {
+				height: 200px;
+			}
+			@media (max-width: $mobile-size) {
+				margin-bottom: 20px;
+			}
+		}
+		&--contacts {
+			position: relative;
+			width: 30%;
+			padding-left: 50px;
+			@media (max-width: $mobileL-size) {
+				height: 200px;
+			}
+		}
+		@media (max-width: $mobileL-size) {
+			width: 50%;
+			float: left;
+		}
+		@media (max-width: $mobile-size) {
+			width: auto;
+			padding: 0;
+			float: none;
+			text-align: center;
+		}
+	}
+}
+
+.icon--placeholder {
+	@include pos('topLeft', 40%, 50%);
+	font-size: 24px;
+}
+
+.footer__contact {
+	&-info {
+		@include text-config(16px, 22px, $grey-color);
+		display: block;
+		&--phone-num {
+			@include text-config(16px, 22px, $grey-color);
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&-link {
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		min-width: 100px;
+		@media (max-width: $mobile-size) {
+			position: static;
+			margin-top: 20px;
+		}
+	}
+}
+
+.footer__service-nav-link {
+	@include text-config(16px, 32px, $grey-color);
+	text-decoration: none;
+	&:hover {
+		color: $black-color;
+	}
+}
+

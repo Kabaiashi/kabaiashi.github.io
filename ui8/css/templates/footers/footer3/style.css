@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,600");
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 0.02em;
+  color: #383737;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 71px;
+  height: 66px;
+  background: url("../../../../img/logo.svg");
+  margin-bottom: 10px;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #f2f5f8;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__nav-title {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.footer__nav-title--name {
+  color: #65abd0;
+}
+
+.footer__nav-link {
+  font-size: 16px;
+  line-height: 32px;
+  color: #b4bbc2;
+  text-decoration: none;
+}
+
+.footer__nav-link:hover {
+  color: #383737;
+}
+
+.footer__part {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin: 0 auto 10px;
+  }
+
+  .footer__nav {
+    display: block;
+  }
+
+  .footer__part {
+    width: 50%;
+    margin-bottom: 30px;
+    float: left;
+    text-align: center;
+  }
+
+  .footer {
+    overflow: hidden;
+  }
+}
+/*# sourceMappingURL=style.css.map */

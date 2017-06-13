@@ -1,0 +1,140 @@
+@import '../../../settings/normalize';
+@import '../../../settings/settings';
+@import '../../../components/buttons';
+@import '../../../components/icons';
+@import '../../../components/inputs';
+@import '../../../icons/iconfont-varible';
+@import '../../../icons/iconfont-icons';
+
+.container {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	max-width: 960px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.nav {
+	position: relative;
+	padding: 18px 0;
+	background-color: $light-grey-color;
+	font-family: $font-stack;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	&__main {
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	&__links {
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		&-item {
+			@include text-config(16px, 36px);
+			margin-left: 40px;
+			text-decoration: none;
+			transition-duration: 0.2s;
+			&:hover {
+				color: $green-color;
+				@include media('wTablet') {
+					color: $white-color;
+					background-color: $green-color;
+				}
+			}
+			&.is-active {
+				color: $green-color;
+				@include media('wTablet') {
+					color: $white-color;
+					background-color: $green-color; 
+				}
+			}
+			@include media('wLaptop') {
+				margin-left: 30px;
+			}
+			@include media('wTablet') {
+				display: block;
+				width: 100%;
+				margin: 0;
+				text-align: center;
+				line-height: 40px;
+				text-transform: uppercase;
+			}
+		}
+		@include media('wTablet') {
+			@include pos('topLeft', 100%, 0);
+			right: 0;
+			flex-direction: column;
+			display: none;
+			background-color: $light-grey-color;
+		}
+	}
+	&__tel {
+		@include text-config(16px, 36px, $grey-color);
+		vertical-align: middle;
+		margin-right: 20px;
+		text-decoration: none;
+		&:hover {
+			color: $black-color; 
+		}
+		@include media('wLaptop') {
+			margin-right: 10px;
+		}
+		&-num {
+			@include media('wMobile') {
+				display: none;
+			}
+		}
+		&-icon {
+			display: none;
+			margin-right: 10px;
+			font-size: 28px;
+			color: $grey-color;
+			@include media('wMobile') {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+	&__sign {
+		min-width: 80px;
+		margin-right: 8px; 
+	}
+}
+
+.search-icon {
+	position: relative;
+	margin-left: 30px;
+	color: $black-color;
+	@include media('wLaptop') {
+		margin-left: 20px;
+	}
+	@include media('wTablet') {
+		display: none;
+	}
+}
+
+.search-box {
+	position: relative;
+	display: none;
+	padding: 2px;
+	&__icon {
+		left: 14px;
+		pointer-events: none;
+	}
+	@include media('wTablet') {
+		display: block;
+		width: 100%; 
+	}
+}
+
+.ic--hamburger {
+	display: block;
+	width: 18px;
+	height: 14px;
+	margin-left: 10px;
+	cursor: pointer;
+}

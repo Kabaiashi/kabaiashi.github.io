@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navigation7</title>
+	<link rel="stylesheet" href="../../../../css/templates/navigations/nav7/style.css">
+</head>
+<body>
+	<nav class="nav">
+		<div class="container">
+			<div class="nav__main">
+				<div class="dropdown-btn ic--hamburger js-btn"></div>
+				<div class="nav__links js-dropdown">
+					<a href="#" class="nav__links-item is-active js-nav-link">Shop</a>
+					<a href="#" class="nav__links-item js-nav-link">Daily Deals</a>
+					<a href="#" class="nav__links-item js-nav-link">Sales</a>
+					<a href="#" class="nav__links-item js-nav-link">Contacts</a>
+					<a href="#" class="nav__links-item js-nav-link">About</a>
+				</div>
+			</div>
+			<div class="account">
+				<a href="#" class="account__link account__setting icon icon--settings"></a>
+				<a href="#" class="account__link account__shop-basket"><span class="icon icon--basket account__shop-basket-ic"></span><span class="account__shop-basket-count">3 Items</span></a>
+				<a href="#" class="account__link account__photo"></a>
+			</div>
+		</div>
+	</nav>
+	<div class="additional-menu"> 
+		<div class="container">
+			<div class="shop-box">
+				<div class="shop-box__list">
+					<h6 class="shop-box__list-title">Top categories</h6>
+					<ul>
+						<li><a href="#" class="shop-box__list-link">Cell Phones</a></li>
+						<li><a href="#" class="shop-box__list-link">Cameras & Photo</a></li>
+						<li><a href="#" class="shop-box__list-link">Computers & Tablets</a></li>
+					</ul>
+				</div>
+				<div class="shop-box__list">
+					<h6 class="shop-box__list-title">Other categories</h6>
+					<ul>
+						<li><a href="#" class="shop-box__list-link">Car Audio, Video, GPS</a></li>
+						<li><a href="#" class="shop-box__list-link">iPhone</a></li>
+						<li><a href="#" class="shop-box__list-link">iPad</a></li>
+						<li><a href="#" class="shop-box__list-link">Video Games & Consoles</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="#" class="ad">
+				<span class="ad__title">Header</span>
+				<span class="ad__text">It was some time before he obtained any answer, and the reply, when made, was unpropitious.</span>
+			</a>
+		</div>
+	</div>
+
+	<script>
+		var navLink = document.querySelectorAll('.js-nav-link');
+		var btn = document.querySelector('.js-btn');
+		var menu = document.querySelector('.js-dropdown');
+
+		function clear(arr) {
+			arr.forEach(function (e) {
+				e.classList.remove('is-active');
+			});
+		}
+
+		navLink.forEach(function (link) {
+			link.addEventListener('click', function () {
+				clear(navLink);
+				this.classList.add('is-active');
+			});
+		});
+
+		btn.addEventListener('click', function () {
+			var w = document.body.clientWidth;
+			if (w <= 767) {
+				if (menu.hasAttribute('style')) {
+					menu.removeAttribute('style');
+				} else {
+					menu.style.display = 'block';
+				}
+			}
+		});
+
+		window.onresize = function() {
+			var w = document.body.clientWidth;
+			if (w > 767 && menu.hasAttribute('style')) {
+				menu.removeAttribute('style');	
+			}
+		}
+
+	</script>
+</body>
+</html>

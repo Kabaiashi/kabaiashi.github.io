@@ -1,0 +1,899 @@
+@charset "UTF-8";
+
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,600");
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: border-box;
+  /* 2 */
+  box-sizing: border-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.account__shop-basket,
+.ad {
+  border-radius: 6px;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ic--chevron {
+  position: relative;
+}
+
+.ic--chevron:after {
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  content: "";
+  position: absolute;
+}
+
+.ic--chevron--left:after {
+  top: 50%;
+  left: -15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-shadow: 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, 4px 4px 0 0 currentColor, 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor;
+  box-shadow: 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, 4px 4px 0 0 currentColor, 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor;
+}
+
+.ic--chevron--right:after {
+  top: 50%;
+  right: -12px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-shadow: -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor;
+  box-shadow: -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor;
+}
+
+.ic--chevron--bottom:after {
+  top: calc(50% + 3px);
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor;
+  box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor;
+}
+
+.ic--close {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.ic--close:after {
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  content: "";
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor, 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, 4px 4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor;
+  box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor, 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, 4px 4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor;
+}
+
+.ic--close__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #b4bbc2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ic--close__circle :after {
+  -webkit-box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor;
+  box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor;
+}
+
+.ic--check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  color: #24aa98;
+}
+
+.ic--check:after {
+  width: 2px;
+  height: 3px;
+  background: currentColor;
+  top: 0;
+  right: 0;
+  position: absolute;
+  content: '';
+  -webkit-box-shadow: -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor, -5px 5px 0 0 currentColor, -6px 6px 0 0 currentColor, -7px 7px 0 0 currentColor, -8px 6px 0 0 currentColor, -9px 5px 0 0 currentColor, -10px 4px 0 0 currentColor, -11px 3px 0 0 currentColor;
+  box-shadow: -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor, -5px 5px 0 0 currentColor, -6px 6px 0 0 currentColor, -7px 7px 0 0 currentColor, -8px 6px 0 0 currentColor, -9px 5px 0 0 currentColor, -10px 4px 0 0 currentColor, -11px 3px 0 0 currentColor;
+}
+
+.ic--hamburger {
+  position: relative;
+}
+
+.ic--hamburger:after {
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  content: "";
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 6px 0 0 currentColor, 0 -6px 0 0 currentColor;
+  box-shadow: 0 6px 0 0 currentColor, 0 -6px 0 0 currentColor;
+}
+
+.ic--search {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  color: #FFF;
+}
+
+.ic--search:after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+
+.ic--search:before {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  content: "";
+  -webkit-box-shadow: -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor, -5px -5px 0 0 currentColor;
+  box-shadow: -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor, -5px -5px 0 0 currentColor;
+}
+
+.ic--search--sm {
+  width: 14px;
+  height: 14px;
+}
+
+.ic--search--sm:after {
+  width: 11px;
+  height: 11px;
+}
+
+.ic--search--sm:before {
+  -webkit-box-shadow: -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor;
+  box-shadow: -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor;
+}
+
+.ic--grey {
+  color: #b4bbc2;
+}
+
+.ic--centered {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.ic--vertical-align {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@font-face {
+  font-family: "icon-font";
+  src: url("../../../../fonts/icon/icon-font.eot");
+  src: url("../../../../fonts/icon/icon-font.?#iefix") format("embedded-opentype"), url("../../../../fonts/icon/icon-font.woff2") format("woff2"), url("../../../../fonts/icon/icon-font.woff") format("woff"), url("../../../../fonts/icon/icon-font.ttf") format("truetype"), url("../../../../fonts/icon/icon-font.#icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "icon-font";
+}
+
+.icon:before {
+  /* Some common icon stuff */
+}
+
+.icon.icon--basket:before {
+  content: "";
+}
+
+.icon.icon--dribbble:before {
+  content: "";
+}
+
+.icon.icon--envelope:before {
+  content: "";
+}
+
+.icon.icon--facebook:before {
+  content: "";
+}
+
+.icon.icon--google-plus:before {
+  content: "";
+}
+
+.icon.icon--linkedin:before {
+  content: "";
+}
+
+.icon.icon--padlock:before {
+  content: "";
+}
+
+.icon.icon--phone:before {
+  content: "";
+}
+
+.icon.icon--placeholder:before {
+  content: "";
+}
+
+.icon.icon--settings:before {
+  content: "";
+}
+
+.icon.icon--twitter:before {
+  content: "";
+}
+
+.icon.icon--upload-cloud:before {
+  content: "";
+}
+
+.icon.icon--vimeo:before {
+  content: "";
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.nav {
+  background-color: #65abd0;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nav__links {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav__links-item {
+  font-size: 18px;
+  line-height: 96px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 40px;
+  text-decoration: none;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.nav__links-item:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav__links-item.is-active {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav__links-item:after {
+  width: 15px;
+  height: 15px;
+  background: #65abd0;
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  content: '';
+  display: none;
+  border-radius: 3px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nav__links-item.is-active:after {
+  display: block;
+}
+
+.dropdown-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.account {
+  padding: 30px 0;
+}
+
+.account__link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.account__setting {
+  margin-right: 18px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.account__setting:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.account__shop-basket {
+  min-width: 106px;
+  height: 36px;
+  margin-right: 14px;
+  padding: 0 10px;
+  border: 2px solid #fff;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.account__shop-basket-ic {
+  margin-right: 8px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.account__shop-basket-count {
+  vertical-align: middle;
+}
+
+.account__shop-basket:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.account__shop-basket:active {
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.account__photo {
+  width: 36px;
+  height: 36px;
+  background: #383737 url("../../../../templates/navigations/views/nav7/img/photo.jpg") center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.additional-menu {
+  padding: 42px 0 54px 0;
+  background-color: #5093b7;
+}
+
+.ad {
+  display: block;
+  width: 460px;
+  padding: 25px 22px 30px 22px;
+  background: url("../../../../templates/navigations/views/nav7/img/ad-bg.jpg") center;
+  background-size: cover;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ad__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: #383737;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.ad__text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #383737;
+  display: block;
+  width: 75%;
+}
+
+.shop-box__list {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+}
+
+.shop-box__list-title {
+  font-size: 18px;
+  line-height: 36px;
+  color: #fff;
+  margin: 0;
+}
+
+.shop-box__list-link {
+  font-size: 16px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.shop-box__list-link:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */
