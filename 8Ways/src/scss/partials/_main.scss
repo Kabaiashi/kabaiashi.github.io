@@ -1,0 +1,50 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family;
+	font-weight: 300;
+}
+
+.title {
+	@include text-config(34px, 100%);
+	margin-top: 0;
+	font-weight: 400;
+}
+
+.arrow-link {
+	@include text-config(10px, 100%, $link-color);
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: 700;
+	&:hover {
+		&:after {
+			right: -25px;
+		}
+		&:before {
+			width: 25px;
+		}
+	}
+	&:after {
+		@include pos('topRight', 50%, -15px);
+		content: '';
+		width: 6px;
+		height: 6px;
+		border-top: 2px solid $arrow-color;
+		border-right: 2px solid $arrow-color;
+		transform: translateY(-50%) rotate(45deg);
+		transition-duration: 0.3s;
+	}
+	&:before {
+		@include pos('topLeft', 0, 100%);
+		content: '';
+		width: 18px;
+		height: 100%;
+		transition-duration: 0.3s;
+	}
+}

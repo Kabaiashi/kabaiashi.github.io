@@ -1,0 +1,174 @@
+.tab {
+	display: flex;
+	align-items: center;
+	height: 860px;
+	margin-bottom: 105px;
+	&__img {
+		&-box {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			@include media('wTablet') {
+				height: 500px;
+				width: 100%;
+			}
+			@include media('wMobile') {
+				height: 250px;
+			}
+		}
+		&-item {
+			@include pos('topLeft', 0, -10%);
+			width: 100%;
+			height: 100%;
+			transition-duration: 0.5s;
+			opacity: 0;
+			&--elegance {
+				background: url(../img/elegance-img.jpg) center;
+			}
+			&--creation {
+				background: url(../img/creation-img.jpg) center;
+			}
+			&--family {
+				background: url(../img/family-office-img.jpg) center;
+			}
+			&--expirience {
+				background: url(../img/expirience-img.jpg) center;
+			}
+			@include media('wTablet') {
+				background-size: cover;
+			}
+		}
+	}
+	&__info {
+		position: relative;
+		width: 50%;
+		height: 760px;
+		background-color: $bg-color;
+		@include media('wLaptop') {
+			height: 600px;
+		}
+		@include media('wTablet') {
+			width: 100%;
+			height: 450px;
+		}
+		@include media('wMobile') {
+			height: 550px;
+		}
+	}
+	&__content {
+		@include pos('topLeft', 50%, 50%);
+		width: 445px;
+		transform: translate(-50%, -60%);
+		transition-duration: 0.5s;
+		opacity: 0;
+		&-title {
+			margin-bottom: 40px;
+			@include media('wLaptop') {
+				margin-bottom: 30px;
+			}
+		}
+		&-desc {
+			@include text-config(16px, 32px);
+			margin-bottom: 30px;
+			text-align: justify;
+			@include media('wLaptop') {
+				margin-bottom: 20px;
+				line-height: 28px;
+			}
+		}
+		@include media('wLaptop') {
+			width: 100%;
+			padding: 0 20px;
+		}
+	}
+	&__link {
+		display: inline-block;
+		margin-top: 20px;
+		@include media('wLaptop') {
+			margin-top: 0;
+		}
+	}
+	&__nav {
+		@include pos('topLeft', 100px, 50%);
+		z-index: 100;
+		display: flex;
+		justify-content: space-between;
+		padding: 6px;
+		border-radius: 2px;
+		background-color: $light-color;
+		transform: translateX(-50%);
+		&-radio {
+			display: none;
+		}
+		&-item {
+			@include text-config(10px, 48px, $tab-text-color);
+			display: block;
+			height: 100%;
+			margin-right: 5px;
+			padding: 0 20px;
+			border-radius: 2px;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.25em;
+			white-space: nowrap;
+			cursor: pointer;
+			transition-duration: 0.3s;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				background-color: $tab-active-bg;
+			}
+			@include media('wTablet') {
+				padding: 0 10px;
+				line-height: 36px;
+			}
+			@include media('wMobile') {
+				padding: 0 5px;
+				line-height: 24px;
+				letter-spacing: 0.05em;
+			}
+		}
+		&-radio:checked + &-item {
+			background-color: $tab-active-bg;
+			color: $text-color;
+		}
+		@include media('wLaptop') {
+			top: 40px;
+		}
+		@include media('wMobile') {
+			top: 10px;
+			padding: 2px;
+		}
+	}
+	@include media('wLaptop') {
+		height: 650px;
+	}
+	@include media('wTablet') {
+		flex-direction: column;
+		height: auto;
+	}
+}
+
+.show-content {
+	transition-delay: 0.5s;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+
+.hide-content {
+	transform: translate(-50%, -60%);
+	opacity: 0;
+}
+
+.show-picture {
+	transition-delay: 0.5s;
+	left: 0;
+	opacity: 1;
+}
+
+.hide-picture {
+	left: -10%;
+	opacity: 0;
+}
+

@@ -1,0 +1,84 @@
+@mixin block-create($width, $height, $bg) {
+	width: $width;
+	height: $height;
+	background: $bg;
+}
+
+@mixin text-config($size, $l-height, $color: $text-color) {
+	font-size: $size;
+	line-height: $l-height;
+	color: $color;
+}
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin vertical-centered {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin cover-block {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@mixin pos($type, $a, $b, $pos: absolute) {
+	@if $type == 'topLeft' {
+		top: $a;
+		left: $b;
+		position: $pos;
+	} @elseif $type == 'topRight' {
+			top: $a;
+			right: $b;
+			position: $pos;
+	} @elseif $type == 'bottomLeft' {
+			bottom: $a;
+			left: $b;
+			position: $pos;
+	} @elseif $type == 'bottomRight' {
+			bottom: $a;
+			right: $b;
+			position: $pos;
+	}
+}
+
+@mixin media($type) {
+	@if $type == 'wLaptop' {
+		@media (max-width: 1023px) {
+			@content;
+		}
+	} @elseif $type == 'wTablet' {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @elseif $type == 'wMobile' {
+		@media (max-width: 449px) {
+			@content;
+		}
+	} @elseif $type == 'wMobileS' {
+		@media (max-width: 320px) {
+			@content;
+		}
+	} @elseif $type == 'hMobile' {
+		@media (max-height: 449px) {
+			@content;
+		}
+	}
+}
