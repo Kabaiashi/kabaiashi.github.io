@@ -1,0 +1,61 @@
+$global-font-icon: 'icon-font';
+
+@font-face {
+	font-family: $global-font-icon;
+	src: url("../fonts/icon/icon-font.woff2") format("woff2"),
+	url("../fonts/icon/icon-font.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+.icon {
+	font-family: $global-font-icon;
+	&:before {
+   /* Some common icon stuff */
+ }
+ 
+ 	&.icon--calendar {
+ 		&:before {
+ 			content: $icon-calendar;
+ 		}
+ 	}
+ 	&.icon--facebook {
+ 		&:before {
+ 			content: $icon-facebook;
+ 		}
+ 	}
+ 	&.icon--instagram {
+ 		&:before {
+ 			content: $icon-instagram;
+ 		}
+ 	}
+ 	&.icon--pencil {
+ 		&:before {
+ 			content: $icon-pencil;
+ 		}
+ 	}
+ 	&.icon--phone {
+ 		&:before {
+ 			content: $icon-phone;
+ 		}
+ 	}
+ 	&.icon--pinterest {
+ 		&:before {
+ 			content: $icon-pinterest;
+ 		}
+ 	}
+ 	&.icon--rss {
+ 		&:before {
+ 			content: $icon-rss;
+ 		}
+ 	}
+ 	&.icon--shopping-cart {
+ 		&:before {
+ 			content: $icon-shopping-cart;
+ 		}
+ 	}
+ 	&.icon--twitter {
+ 		&:before {
+ 			content: $icon-twitter;
+ 		}
+ 	}
+}

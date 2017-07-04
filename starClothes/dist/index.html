@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Star Clothes</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top clearfix">
+				<div class="container">
+					<nav class="header__top-nav">
+						<a href="#" class="header__top-link header__top-link--nav">Help</a>
+						<a href="#" class="header__top-link header__top-link--nav">Contact</a>
+						<a href="#" class="header__top-link header__top-link--nav">Delivery Information</a>
+					</nav>
+					<a href="tel:123 456 78 90" class="header__top-link header__top-link--phone"><span class="icon icon--phone header__top-phone-icon"></span><span class="header__top-media-hide">Call us : 123 456 78 90</span></a>
+				</div>
+			</div>
+			<div class="header__main">
+				<div class="container header__main-content">
+					<a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
+					<div class="header__main-content-right">
+						<div class="header__main-content-right-top clearfix">
+							<div class="header__main-user">
+								<a href="#" class="header__main-user-link is-active">Login</a>
+								<a href="#" class="header__main-user-link">Register</a>
+							</div>
+							<div class="header__main-cart">
+								<a href="#" class="header__main-cart-link"><span class="icon icon--shopping-cart header__main-cart-icon"></span>My Cart ( <span class="js-count">0</span> ) : <span class="js-price">$0</span></a>
+								<a href="#" class="btn header__main-cart-check">Checkout</a>
+							</div>
+						</div>
+						<div class="search-form">
+							<form action="#">
+								<input type="search" class="search-form__field" placeholder="Search" required>
+								<button class="search-form__btn"></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__nav-box">
+				<div class="container clearfix">
+					<div class="header__dropdown-btn js-dropdown-btn"></div>
+					<nav class="header__nav clearfix js-dropdown">
+						<a href="#" class="header__nav-link is-active">Home</a>
+						<a href="#" class="header__nav-link">New Arrivals</a>
+						<a href="#" class="header__nav-link">Tuxedo</a>
+						<a href="#" class="header__nav-link">Sweater</a>
+						<a href="#" class="header__nav-link">Shoes</a>
+						<a href="#" class="header__nav-link">Glassess</a>
+						<a href="#" class="header__nav-link">T-shirt</a>
+						<a href="#" class="header__nav-link">Watches</a>
+						<span class="header__nav-close js-close"></span>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="slider">
+				<a href="#" class="slider__sale"><img src="img/sale.svg" alt=""></a>
+				<div class="slider__item slider__item--first js-slide"></div>
+				<div class="slider__item slider__item--second js-slide"></div>
+				<div class="slider__item slider__item--third js-slide"></div>
+				<div class="slider__item slider__item--fourth js-slide"></div>
+				<div class="slider__nav clearfix">
+					<span class="slider__nav-item is-active js-slider-btn"></span>
+					<span class="slider__nav-item js-slider-btn"></span>
+					<span class="slider__nav-item js-slider-btn"></span>
+					<span class="slider__nav-item js-slider-btn"></span>
+				</div>
+			</div>
+		</div>
+		<div class="new-arrivals">
+			<h2 class="title">New arrivals</h2>
+			<div class="container new-arrivals__content">
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-1.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Платье diesel</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<div>
+							<button class="btn product-item__action">buy</button>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-2.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt G-Star raw</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-3.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">extra mini summer by Oleandr Scott</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>32 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-4.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirpt Pepe Jeans black one</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>2 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-5.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt G-Star raw</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-6.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt diesel</a>
+					<span class="product-item__price sale"><span class="dollar-symbol">$</span><span class="sale__old-price">6 500</span><span class="sale__new-price">$5 520</span></span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-7.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt diesel</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-8.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Top Tommy Hilfiger</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-9.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt diesel</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-10.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt G-Star raw</a>
+					<span class="product-item__price sale"><span class="dollar-symbol">$</span><span class="sale__old-price">6 500</span><span class="sale__new-price">$5 520</span></span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-11.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt Tommy Hilfiger mini</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>32 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="img/new arrivals/new-arrival-pic-12.jpg" alt="" class="product-item__img"></a>
+					<a href="#" class="product-item__title">Skirt G-Star Raw</a>
+					<span class="product-item__price"><span class="dollar-symbol">$</span>5 520</span>
+					<div class="product-item__more">
+						<span class="product-item__more-text">Size</span>
+						<div class="product-item__size clearfix">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						<button class="btn product-item__action">buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="brands">
+			<div class="container">
+				<h2 class="title">Brands</h2>
+				<div class="brands__list">
+					<a href="#" class="brands__list-item"><img src="img/brands/brand-1.png" alt=""></a>
+					<a href="#" class="brands__list-item"><img src="img/brands/brand-2.png" alt=""></a>
+					<a href="#" class="brands__list-item"><img src="img/brands/brand-3.png" alt=""></a>
+					<a href="#" class="brands__list-item"><img src="img/brands/brand-4.png" alt=""></a>
+					<a href="#" class="brands__list-item"><img src="img/brands/brand-5.png" alt=""></a>
+					<a href="#" class="brands__list-item"><img src="img/brands/brand-6.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="product-slider clearfix">
+			<div class="product-slider__img-block"></div>
+			<div class="product-slider__slide-part">
+				<div class="product-slider__wrap">
+					<div class="product-slider__box">
+						<div class="product-slider__item product-slider__item--first">
+							<a href="#" class="product-slider__item-link">
+								<img src="img/product-slider-img-1.jpg" alt="" class="product-slider__picture">
+								<span class="product-slider__name">Skirt diesel</span>
+							</a>
+							<span class="product-slider__price">$5 520</span>
+						</div>
+						<div class="product-slider__item product-slider__item--second">
+							<a href="#" class="product-slider__item-link">
+								<img src="img/product-slider-img-2.jpg" alt="" class="product-slider__picture">
+								<span class="product-slider__name">Skirt diesel</span>
+							</a>
+							<span class="product-slider__price">$1 520</span>
+						</div>
+						<div class="product-slider__item product-slider__item--third">
+							<a href="#" class="product-slider__item-link">
+								<img src="img/product-slider-img-3.jpg" alt="" class="product-slider__picture">
+								<span class="product-slider__name">Skirt diesel</span>
+							</a>
+							<span class="product-slider__price">$2 520</span>
+						</div>
+						<div class="product-slider__item product-slider__item--fourth">
+							<a href="#" class="product-slider__item-link">
+								<img src="img/product-slider-img-4.jpg" alt="" class="product-slider__picture">
+								<span class="product-slider__name">Skirt diesel</span>
+							</a>
+							<span class="product-slider__price">$3 520</span>
+						</div>
+					</div>
+					<div class="product-slider__nav clearfix">
+						<div class="product-slider__nav-item product-slider__nav-item--first"></div>
+						<div class="product-slider__nav-item product-slider__nav-item--second"></div>
+						<div class="product-slider__nav-item product-slider__nav-item--third"></div>
+						<div class="product-slider__nav-item product-slider__nav-item--fourth"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="news">
+			<div class="container">
+				<h2 class="title">News</h2>
+				<div class="news__content">
+					<div class="news__item">
+						<a href="#" class="news__item-picture"><img src="img/news-pic-1.jpg" alt=""></a>
+						<div class="news__info">
+							<a href="#" class="news__info-author"><span class="news__info-ic icon icon--pencil"></span>Stone Clad</a>
+							<span class="news__info-date"><span class="news__info-ic icon icon--calendar"></span>27.01.2017</span>
+						</div>
+						<h6 class="news__title">We added many things you may like</h6>
+						<p class="news__text">It is a long established fact that a reader will be distracted.</p>
+						<a href="" class="btn news__action">Learn more</a>
+					</div>
+					<div class="news__item">
+						<a href="#" class="news__item-picture"><img src="img/news-pic-2.jpg" alt=""></a>
+						<div class="news__info">
+							<a href="#" class="news__info-author"><span class="news__info-ic icon icon--pencil"></span>Stone Clad</a>
+							<span class="news__info-date"><span class="news__info-ic icon icon--calendar"></span>27.01.2017</span>
+						</div>
+						<h6 class="news__title">We added many things you may like</h6>
+						<p class="news__text">It is a long established fact that a reader will be distracted.</p>
+						<a href="" class="btn news__action">Learn more</a>
+					</div>
+					<div class="news__item">
+						<a href="#" class="news__item-picture"><img src="img/news-pic-3.jpg" alt=""></a>
+						<div class="news__info">
+							<a href="#" class="news__info-author"><span class="news__info-ic icon icon--pencil"></span>Stone Clad</a>
+							<span class="news__info-date"><span class="news__info-ic icon icon--calendar"></span>27.01.2017</span>
+						</div>
+						<h6 class="news__title">We added many things you may like</h6>
+						<p class="news__text">It is a long established fact that a reader will be distracted.</p>
+						<a href="" class="btn news__action">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="container">
+				<h2 class="title">Contact us</h2>
+				<form action="#">
+					<div class="contact__form">
+						<div class="contact__text-box">
+							<div class="contact__text-box-item">
+								<input type="text" placeholder="*name" pattern="[a-zA-Z]+" title="You can use only latin letters" class="contact__field js-field" required>
+							</div>
+							<div class="contact__text-box-item">
+								<input type="text" placeholder="*surname" pattern="[a-zA-Z]+" title="You can use only latin letters" class="contact__field js-field" required>
+							</div>
+						</div>
+						<div class="contact__email-box">
+							<input type="email" placeholder="*email" class="contact__field js-field" required>
+						</div>
+						<div class="contact__ta-box">
+							<textarea name="message" placeholder="message" class="contact__field contact__field--ta"></textarea>
+						</div>
+						<div class="contact__ch-box">
+							<div class="contact__ch-box-item">
+								<input type="checkbox" class="check-box" id="agree" checked><label for="agree" class="check-box__label">I agree</label>
+							</div>
+							<div class="contact__ch-box-item">
+								<input type="checkbox" class="check-box" id="news"><label for="news" class="check-box__label">Send me news</label>
+							</div>
+						</div>
+						<div class="contact__action">
+							<button class="btn contact__btn js-form-btn">Send</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__content">
+				<div class="footer__list">
+					<h6 class="footer__title">Shops</h6>
+					<ul>
+						<li><a href="#" class="footer__list-link">New In</a></li>
+						<li><a href="#" class="footer__list-link">Women</a></li>
+						<li><a href="#" class="footer__list-link">Men</a></li>
+						<li><a href="#" class="footer__list-link">Shoes</a></li>
+						<li><a href="#" class="footer__list-link">Bags & Accessories</a></li>
+						<li><a href="#" class="footer__list-link">Top Brands</a></li>
+						<li><a href="#" class="footer__list-link">Sale & Special Offers</a></li>
+						<li><a href="#" class="footer__list-link">Lookbook</a></li>
+					</ul>
+				</div>
+				<div class="footer__list">
+					<h6 class="footer__title">Information</h6>
+					<ul>
+						<li><a href="#" class="footer__list-link">About us</a></li>
+						<li><a href="#" class="footer__list-link">Customer Service</a></li>
+						<li><a href="#" class="footer__list-link">New Collection</a></li>
+						<li><a href="#" class="footer__list-link">Best Sellers</a></li>
+						<li><a href="#" class="footer__list-link">Manufacturers</a></li>
+						<li><a href="#" class="footer__list-link">Privacy policy</a></li>
+						<li><a href="#" class="footer__list-link">Terms & condition</a></li>
+						<li><a href="#" class="footer__list-link">Blog</a></li>
+					</ul>
+				</div>
+				<div class="footer__list">
+					<h6 class="footer__title">Customer service</h6>
+					<ul>
+						<li><a href="#" class="footer__list-link">Search Terms</a></li>
+						<li><a href="#" class="footer__list-link">Advanced Search</a></li>
+						<li><a href="#" class="footer__list-link">Orders and Returns</a></li>
+						<li><a href="#" class="footer__list-link">Contact Us</a></li>
+						<li><a href="#" class="footer__list-link">RSS</a></li>
+						<li><a href="#" class="footer__list-link">Help & FAQs</a></li>
+						<li><a href="#" class="footer__list-link">Consultant</a></li>
+						<li><a href="#" class="footer__list-link">Store Locations</a></li>
+					</ul>
+				</div>
+				<div class="footer__other">
+					<div class="footer__social-box">
+						<h6 class="footer__title">Stay connected</h6>
+						<nav class="social-nav clearfix">
+							<a href="#" class="social-nav__link icon icon--facebook"></a>
+							<a href="#" class="social-nav__link icon icon--twitter"></a>
+							<a href="#" class="social-nav__link icon icon--instagram"></a>
+							<a href="#" class="social-nav__link social-nav__link--pinterest icon icon--pinterest"></a>
+							<a href="#" class="social-nav__link social-nav__link--rss icon icon--rss"></a>
+						</nav>
+					</div>
+					<div class="subscribe-box">
+						<h6 class="footer__title">Subscribe in our news letter</h6>
+						<form action="#">
+							<div class="subscribe-box__input-group">
+								<input type="email" class="subscribe-box__field" placeholder="Enter Your Email Address" required>
+								<button class="subscribe-box__btn">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<a href="#" class="to-top js-scroll"></a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

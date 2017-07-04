@@ -1,0 +1,203 @@
+.header {
+	&__top {
+		background-color: $header-top-color;
+		&-nav {
+			float: left;
+		}
+		&-link {
+			@include text-config(12px, 30px, $light-color);
+			text-decoration: none;
+			font-weight: 300;
+			&:hover {
+				text-decoration: underline;
+			}
+			&:not(:first-child) {
+				margin-left: 25px;
+				@include media('wMobile') {
+					margin-left: 15px;
+				}
+			}
+			&--phone {
+				float: right;
+				&:hover {
+					text-decoration: none;
+					opacity: 0.9;
+				}
+			}
+		}
+		&-phone-icon {
+			margin-right: 10px;
+		}
+		&-media-hide {
+			@include media('wMobile') {
+				display: none;
+			}
+		}
+	}
+	&__main {
+		padding: 23px 0;
+		background: $content-gradient;
+		&-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&-right {
+				width: 460px;
+				@include media('wMobile') {
+					width: 100%;
+				}
+				&-top {
+					margin-bottom: 14px;
+				}
+			}
+			@include media('wTablet') {
+				flex-direction: column;
+			}
+		}
+		&-user {
+			float: left;
+			&-link {
+				@include text-config(13px, 28px);
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 20px;
+				margin-right: 8px;
+				border: 1px solid transparent;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: 300;
+				letter-spacing: 0;
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover {
+					border-color: $border-color;
+				}
+				&.is-active {
+					border-color: $border-color;
+				}
+			}
+			@include media('wMobile') {
+				margin-bottom: 20px;
+				float: none;
+				text-align: center;
+			}
+		}
+		&-cart {
+			float: right;
+			&-link {
+				@include text-config(13px, 28px);
+				vertical-align: middle;
+				font-weight: 300;
+				text-decoration: none;
+				letter-spacing: 0;
+			}
+			&-icon {
+				vertical-align: middle;
+				margin-right: 10px;
+				font-size: 18px;
+				line-height: 18px;
+			}
+			&-check {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 18px;
+				padding: 0 15px;
+				font-size: 13px;
+				line-height: 30px;
+				letter-spacing: 0;
+			}
+		}
+	}
+	&__nav-box {
+		padding-bottom: 25px;
+		background: $content-gradient;
+	}
+	&__nav {
+		float: left;
+		background: $nav-gradient;
+		&-link {
+			@include text-config(16px, 40px);
+			padding: 0 30px;
+			float: left;
+			font-weight: 300;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover {
+				background-color: $nav-active-color;
+				@include media('wMobile') {
+					background: rgba(0,0,0,1);
+				}
+			}
+			&.is-active {
+				background-color: $nav-active-color;
+				@include media('wMobile') {
+					background: rgba(0,0,0,1);
+				}
+			}
+			@include media('wTablet') {
+				padding: 0 15px;
+			}
+			@include media('wMobile') {
+				display: block;
+				padding: 0;
+				float: none;
+				text-align: center;
+				font-weight: 700;
+				color: $snow-color;
+			}
+		}
+		&-close {
+			@include pos('topRight', 20px, 20px);
+			display: none;
+			width: 30px;
+			height: 30px;
+			color: $snow-color;
+			cursor: pointer;
+			&:after,
+			&:before {
+				@include pos('topLeft', 50%, 50%);
+				@include block-create(100%, 2px, currentColor);
+				content: "";
+			}
+			&:after {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			&:before {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+			@include media('wMobile') {
+				display: block;
+			}
+		}
+		@include media('wMobile') {
+			position: fixed;
+			top: -1000px;
+			left: 0;
+			right: 0;
+			z-index: 999;
+			background: rgba(0,0,0,.8);
+			transition-duration: 0.3s;
+		}
+	}
+	&__dropdown-btn {
+		position: relative;
+		display: none;
+		width: 20px;
+		height: 16px;
+		margin-left: 20px;
+		color: $dark-color;
+		cursor: pointer;
+		&:after {
+			@include block-create(100%, 2px, currentColor);
+			@include centered;
+			content: "";
+			box-shadow: 0 -7px 0 0 currentColor,
+			0 7px 0 0 currentColor;
+		}
+		@include media('wMobile') {
+			display: block;
+		}
+	}
+}

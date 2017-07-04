@@ -1,0 +1,258 @@
+.slider {
+	@include block-create(100%, 610px, $title-color);
+	position: relative;
+	margin: 35px 0;
+	overflow: hidden;
+	&__item {
+		@include cover-block;
+		z-index: 1;
+		transition-duration: 1s;
+		opacity: 0;
+		&--first {
+			background: url('../img/slider-pic-1.jpg') top center;
+			background-size: cover;
+		}
+		&--second {
+			background: url('../img/slider-pic-2.jpg') top center;
+			background-size: cover;
+		}
+		&--third {
+			background: url('../img/slider-pic-3.jpg') top center;
+			background-size: cover;
+		}
+		&--fourth {
+			background: url('../img/slider-pic-4.jpg') top center;
+			background-size: cover;
+		}
+	}
+	&__sale {
+		@include pos('topLeft', 80px, 50%);
+		z-index: 2;
+		width: 278px;
+		transform: translateX(-50%);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@include media('wTablet') {
+			top: 20px;
+			width: 150px;
+		}
+		@include media('wMobile') {
+			top: 10px;
+			width: 100px;
+		}
+	}
+	&__nav {
+		@include pos('bottomLeft', 40px, 50%);
+		z-index: 5;
+		transform: translatex(-50%);
+		&-item {
+			@include block-create(18px, 18px, $slider-btn-color);
+			float: left;
+			border-radius: 50%;
+			cursor: pointer;
+			&:not(:first-child) {
+				margin-left: 10px;
+			}
+			&.is-active {
+				background-color: $dark-color;
+			}
+			@include media('wMobile') {
+				width: 14px;
+				height: 14px;
+			}
+		}
+		@include media('wTablet') {
+			bottom: 20px;
+		}
+	}
+	@include media('wTablet') {
+		height: 300px;
+	}
+	@include media('wMobile') {
+		height: 200px;
+	}
+}
+
+.product-slider {
+	margin-bottom: 35px;
+	background: $content-gradient;
+	&__img-block {
+		width: 50%;
+		float: left;
+		height: 800px;
+		background: url('../img/bg-img.jpg') top center;
+		background-size: cover;
+		@include media('wTablet') {
+			width: 100%;
+			height: 600px;
+		}
+		@include media('wMobile') {
+			height: 400px;
+		}
+	}
+	&__slide-part {
+		width: 50%;
+		float: left;
+		display: flex;
+		justify-content: space-around;
+		padding: 45px 20px;
+		@include media('wTablet') {
+			width: 100%;
+		}
+	}
+	&__wrap {
+		position: relative;
+		width: 455px;
+		height: 700px;
+		padding-bottom: 100px;
+		@include media('wMobileS') {
+			height: 500px;
+		}
+	}
+	&__box {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-color: $snow-color;
+		overflow: hidden;
+		&:hover .product-slider__item,
+		&:hover + .product-slider__nav > .product-slider__nav-item {
+			animation-play-state: paused;
+		}
+	}
+	&__item {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		padding: 0 15px 30px 15px;
+		&--first {
+			animation: cycle 20s linear infinite;
+		}
+		&--second {
+			animation: cycletwo 20s linear infinite;
+		}
+		&--third {
+			animation: cyclethree 20s linear infinite;
+		}
+		&--fourth {
+			animation: cyclefour 20s linear infinite;
+		}
+		&-link {
+			text-decoration: none;
+		}
+	}
+	&__picture {
+		width: 100%;
+		height: auto;
+	}
+	&__name {
+		@include text-config(22px, 34px, $dark-color);
+		display: block;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	&__price {
+		@include text-config(28px, 36px, $dark-color);
+	}
+	&__nav {
+		@include pos('bottomLeft', 50px, 50%);
+		transform: translateX(-50%);
+		&-item {
+			@include block-create(10px, 10px, $product-slider-btn-color);
+			float: left;
+			border-radius: 50%;
+			&:not(:first-child) {
+				margin-left: 30px;
+			}
+			&--first {
+				animation: navone 20s linear infinite;
+			}
+			&--second {
+				animation: navtwo 20s linear infinite;
+			}
+			&--third {
+				animation: navthree 20s linear infinite;
+			}
+			&--fourth {
+				animation: navfour 20s linear infinite;
+			}
+		}
+	}
+}
+
+@keyframes cycle {
+	0%  { left: 0; }
+	5%  { left: 0; }
+	20% { left: 0; opacity: 1; z-index: 0; }
+	25% { left: -100%; opacity: 0; z-index: 0; }
+	30% { left: 100%; opacity: 0; z-index: -1; }
+	90% { left: 100%; opacity: 0; z-index: 0; }
+	95% { left: 100%; opacity: 0; }
+	100%{ left: 0; opacity: 1; }
+}
+
+@keyframes cycletwo {
+	0%  { left: 100%; opacity: 0; }
+	20% { left: 100%; opacity: 0 }
+	25% { left: 0; opacity: 1; }
+	30% { left: 0; opacity: 1; }
+	45% { left: 0; opacity: 1; z-index: 0; }
+	50% { left: -100%; opacity: 0; z-index: 0; }
+	55% { left: 100%; opacity: 0; z-index: -1; }
+	100%{ left: 100%; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+	0%  { left: 100%; opacity: 0; }
+	45% { left: 100%; opacity: 0; }
+	50% { left: 0; opacity: 1; }
+	55% { left: 0; opacity: 1; }
+	70% { left: 0; opacity: 1; }
+	75% { left: -100%; opacity: 0; z-index: 0; }
+	80% { left: 100%; opacity: 0; z-index: -1; }
+	100%{ left: 100%; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+	0%  { left: 100%; opacity: 0; }
+	70% { left: 100%; opacity: 0; }
+	75% { left: 0; opacity: 1; }
+	80% { left: 0; opacity: 1; }
+	95% { left: 0; opacity: 1; z-index: 0; }
+	100%{ left: -100%; opacity: 0; z-index: 0; }
+}
+
+@keyframes navone {
+	0% { background-color: $dark-color; }
+	20% { background-color: $dark-color; }
+	25% { background-color: $product-slider-btn-color; }
+	95% { background-color: $product-slider-btn-color; }
+	100%{ background-color: $dark-color; }
+}
+
+@keyframes navtwo {
+	0% { background-color: $product-slider-btn-color; }
+	20% { background-color: $product-slider-btn-color; }
+	25% { background-color: $dark-color; }
+	45% { background-color: $dark-color; }
+	50% { background-color: $product-slider-btn-color; }
+}
+
+@keyframes navthree {
+	0% { background-color: $product-slider-btn-color; }
+	45% { background-color: $product-slider-btn-color; }
+	50% { background-color: $dark-color; }
+	70% { background-color: $dark-color; }
+	75% { background-color: $product-slider-btn-color; }
+}
+
+@keyframes navfour {
+	0% { background-color: $product-slider-btn-color; }
+	70% { background-color: $product-slider-btn-color; }
+	75% { background-color: $dark-color; }
+	95% { background-color: $dark-color; }
+	100%{ background-color: $product-slider-btn-color; }
+}

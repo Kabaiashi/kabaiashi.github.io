@@ -1,0 +1,42 @@
+.footer {
+	padding-top: 40px;
+	padding-bottom: 50px;
+	background-color: $footer-bg-color;
+	&__content {
+		position: relative;
+		display: flex;
+		padding-right: 55px;
+		@include media('wTablet') {
+			flex-wrap: wrap;
+		}
+		@include media('wMobile') {
+			padding-right: 0;
+		}
+	}
+	&__title {
+		@include text-config(16px, 30px, $snow-color);
+		margin-top: 0;
+		margin-bottom: 35px;
+		text-transform: uppercase;
+		letter-spacing: 0;
+	}
+	&__list {
+		padding: 0 10px;
+		&-link {
+			@include text-config(14px, 30px, $footer-link-color);
+			text-decoration: none;
+			&:hover {
+				color: $snow-color;
+			}
+		}
+		@include media('wTablet') {
+			margin-bottom: 50px;
+		}
+	}
+	&__social-box {
+		margin-bottom: 50px;
+	}
+	&__other {
+		padding: 0 10px;
+	}
+}

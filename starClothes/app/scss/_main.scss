@@ -1,0 +1,447 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+input,
+button,
+textarea {
+	outline: none;
+	border: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+body {
+	background-color: $light-grey-color;
+	font-family: $font-stack;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+}
+
+.btn {
+	background-color: $dark-color;
+	text-align: center;
+	color: $snow-color;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover {
+		box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+	}
+}
+
+.wrapper {
+	max-width: 1850px;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1290px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-left: 18px;
+	img {
+		width: 184px;
+		height: auto;
+	}
+	@include media('wTablet') {
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+}
+
+.search-form {
+	position: relative;
+	&__field {
+		@include input-placeholder {
+			color: $text-color;
+			font-weight: 300;
+		}
+		width: 100%;
+		height: 40px;
+		padding: 0 35px 0 20px;
+		border: 1px solid $border-color;
+		background: transparent;
+		font-family: $font-stack;
+		font-size: 13px;
+		font-weight: 400;
+		letter-spacing: 0.05em;
+		color: $text-color;
+	}
+	&__btn { 
+		@include vertical-centered;
+		right: 12px;
+		width: 18px;
+		height: 18px;
+		background-color: transparent;
+		color: rgba(0,0,0,.5);
+		cursor: pointer;
+		&:before {
+			@include pos('topLeft', 0, 0);
+			content: "";
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			border: 2px solid currentColor;
+		}
+		&:after {
+			@include pos('bottomRight', 0, 0);
+			@include block-create(2px, 2px, currentColor);
+			content: "";
+			box-shadow: -1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor;
+		}
+	}
+}
+
+.title {
+	@include text-config(37px, auto, $title-color);
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-shadow: -1.8px 3.6px 3.3px rgba(0, 0, 2, 0.11);
+	@include media('wMobile') {
+		font-size: 34px;
+	}
+}
+
+.new-arrivals {
+	padding: 30px 0;
+	background: $content-gradient;
+	&__content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		padding: 0 20px;
+	}
+}
+
+.brands {
+	margin: 35px 0;
+	padding: 30px 0;
+	background: $content-gradient;
+	&__list {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 60px 0 100px;
+		&-item {
+			padding: 10px;
+			& > img {
+				width: 100%;
+				height: auto;
+			}
+			@include media('wTablet') {
+				margin-bottom: 20px;
+			}
+		}
+		@include media('wTablet') {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+}
+
+.news {
+	padding: 30px 0;
+	margin-bottom: 35px;
+	background: $content-gradient;
+	&__content {
+		display: flex;
+		@include media('wTablet') {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+	&__item {
+		width: 430px;
+		padding: 12px;
+		&-picture {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	&__info {
+		margin-bottom: 10px;
+		&-author,
+		&-date {
+			@include text-config(13px, 23px, $dark-color);
+			letter-spacing: 0.14em;
+		}
+		&-author {
+			margin-right: 30px;
+			text-decoration: none;
+		}
+		&-ic {
+			position: relative;
+			top: 1px;
+			margin-right: 10px;
+		}
+	}
+	&__title {
+		@include text-config(14px, 24px, $title-color);
+		margin: 0;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+	}
+	&__text {
+		@include text-config(14px, 23px, $dark-color);
+		margin: 0;
+		letter-spacing: 0.14em;
+	}
+	&__action {
+		display: inline-block;
+		min-width: 108px;
+		margin: 20px 0;
+		padding: 0 10px;
+		font-size: 13px;
+		line-height: 30px;
+		letter-spacing: 0;
+	}
+}
+
+.contact {
+	margin-bottom: 35px;
+	padding: 30px 0;
+	background: $content-gradient;
+	&__form {
+		max-width: 964px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+	&__field {
+		@include block-create(100%, 50px, $field-bg-color);
+		@include text-config(14px, 23px, $dark-color);
+		@include input-placeholder {
+			text-transform: uppercase;
+			color: #c0c0c0;
+		}
+		border: 1px solid transparent;
+		padding-left: 34px;
+		padding-right: 20px;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		&--ta {
+			height: 365px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			resize: none;
+			@include media('wMobile') {
+				height: 250px;
+			}
+		}
+		&:valid {
+			border-color: transparent;
+		}
+	}
+	&__text-box {
+		display: flex;
+		justify-content: space-between;
+		&-item {
+			width: 48%;
+			margin-bottom: 35px;
+			@include media('wTablet') {
+				width: 100%;
+			}
+		}
+		@include media('wTablet') {
+			flex-direction: column;
+		}
+	}
+	&__email-box {
+		margin-bottom: 35px;
+	}
+	&__ch-box {
+		margin-top: 15px;
+		&-item {
+			margin-bottom: 10px;
+		}
+	}
+	&__btn {
+		min-width: 110px;
+		margin-top: 20px;
+		padding: 0 10px;
+		font-size: 15px;
+		line-height: 40px;
+	}
+}
+
+.field-error {
+	@include input-placeholder {
+		color: $error-color;
+	}
+	border-color: $error-color;
+}
+
+.check-box {
+	display: none;
+	cursor: pointer;
+	&:checked + &__label {
+		color: $dark-color;
+		&:before {
+			border-color: $dark-color;
+			background-color: $dark-color;
+		}
+	}
+	&__label {
+		@include text-config(13px, 14px, $label-color);
+		position: relative;
+		left: 35px;
+		text-transform: uppercase;
+		letter-spacing: 0;
+		cursor: pointer;
+		&:before {
+			@include pos('topLeft', -1px, -35px);
+			content: "";
+			width: 20px;
+			height: 20px;
+			border: 1px solid $checkbox-border-color;
+			box-shadow: inset 0 0 0 1px $snow-color;
+		}
+	}
+}
+
+.footer {
+	padding-top: 40px;
+	padding-bottom: 50px;
+	background-color: $footer-bg-color;
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding-right: 55px;
+		@include media('wTablet') {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		@include media('wMobile') {
+			padding-right: 0;
+		}
+	}
+	&__title {
+		@include text-config(16px, 30px, $snow-color);
+		margin-top: 0;
+		margin-bottom: 35px;
+		text-transform: uppercase;
+		letter-spacing: 0;
+	}
+	&__list {
+		padding: 0 10px;
+		&-link {
+			@include text-config(14px, 30px, $footer-link-color);
+			text-decoration: none;
+			&:hover {
+				color: $snow-color;
+			}
+		}
+		@include media('wTablet') {
+			margin-bottom: 50px;
+		}
+	}
+	&__social-box {
+		margin-bottom: 50px;
+	}
+	&__other {
+		padding: 0 10px;
+	}
+}
+
+.social-nav {
+	&__link {
+		@include block-create(50px, 50px, $snow-color);
+		@include text-config(24px, 50px, $dark-color);
+		float: left;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		&:not(:first-child) {
+			margin-left: 15px;
+			@include media('wLaptop') {
+				margin-left: 10px;
+			}
+		}
+		&--pinterest {
+			font-size: 26px;
+		}
+		&--rss {
+			font-size: 20px;
+		}
+	}
+}
+
+.subscribe-box {
+	&__input-group {
+		position: relative;
+		width: 362px;
+		@include media('wLaptop') {
+			width: 300px;
+		}
+	}
+	&__field {
+		@include block-create(100%, 42px, transparent);
+		border: 1px solid $subscribe-color;
+		font-size: 12px;
+		letter-spacing: 0;
+		padding-left: 24px;
+		padding-right: 110px;
+		color: $snow-color;
+	}
+	&__btn {
+		@include pos('topRight', 50%, 4px);
+		@include block-create(100px, 34px, $subscribe-color);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0;
+		color: $snow-color;
+		transform: translateY(-50%);
+	}
+}
+
+.to-top {
+	@include pos('topRight', 0, 0);
+	@include block-create(44px, 44px, $snow-color);
+	color: $dark-color;
+	&:after {
+		@include block-create(2px, 2px, currentColor);
+		@include pos('topLeft', calc(50% - 4px), 50%);
+		content: "";
+		transform: translate(-50%, -50%);
+		box-shadow: 1px 1px 0 0 currentColor,
+		2px 2px 0 0 currentColor,
+		3px 3px 0 0 currentColor,
+		4px 4px 0 0 currentColor,
+		5px 5px 0 0 currentColor,
+		6px 6px 0 0 currentColor,
+		-1px 1px 0 0 currentColor,
+		-2px 2px 0 0 currentColor,
+		-3px 3px 0 0 currentColor,
+		-4px 4px 0 0 currentColor,
+		-5px 5px 0 0 currentColor,
+		-6px 6px 0 0 currentColor;
+	}
+	@include media('wTablet') {
+		top: auto;
+		bottom: 250px;
+	}
+}
