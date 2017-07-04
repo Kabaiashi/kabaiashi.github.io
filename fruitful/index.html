@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fruitful</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<header class="header" id="head"> 
+			<div class="header__top">
+				<div class="container">
+					<div class="header__content">
+						<a href="#" class="logo-text">Sitename <span>my first web page</span></a>
+						<div class="contact">
+							<a href="#" class="login-link"><span class="key-ic"></span>Login</a>
+							<button class="contact__btn"><img src="img/envelope.svg" alt="" class="envelope-ic"><span>contact me</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container">
+					<div class="header__content">
+						<div class="dropdown-btn js-btn"></div>
+						<nav class="nav js-menu">
+							<a href="#" class="nav__link is-active js-nav-link">home</a>
+							<a href="#" class="nav__link js-nav-link">about</a>
+							<a href="#" class="nav__link js-nav-link">news</a>
+							<a href="#" class="nav__link js-nav-link">portfolio</a>
+							<a href="#" class="nav__link js-nav-link">blog</a>
+						</nav>
+						<div class="form-group">
+							<form action="#">
+								<input type="search" class="form-group__field" placeholder="search">
+								<button class="form-group__search-btn"></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="content">
+				<h1 class="content__title">What 10 Things Should You Do Every Day To Improve Your Life?</h1>
+				<p class="content__paragraph">Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind.  Increasing willpower just takes a little effort each day and it’s more responsible for your success than IQ.</p>
+				<h6 class="content__list-title">Key features</h6>
+				<ul class="content__features">
+					<li class="content__features-item">It will make you happier.</li>
+					<li class="content__features-item">It will improve your relationships.</li>
+					<li class="content__features-item">It can make you a better person.</li>
+					<li class="content__features-item">It can make life better for everyone around you.</li>
+				</ul>
+				<h6 class="news-title">Recent news</h6>
+				<div class="news-gallery">
+					<div class="news-gallery__item">
+						<a href="#" class="news-gallery__link"><img src="img/news-pic-1.jpg" alt="pic-1">
+							<span class="news-gallery__desc">Being in nature reduces stress, makes you more creative</span>
+						</a>
+					</div>
+					<div class="news-gallery__item">
+						<a href="#" class="news-gallery__link"><img src="img/news-pic-2.jpg" alt="pic-2">
+							<span class="news-gallery__desc">Usability Testing for Mobile Is Easy</span>
+						</a>
+					</div>
+					<div class="news-gallery__item">
+						<a href="#" class="news-gallery__link"><img src="img/news-pic-3.jpg" alt="pic-3">
+							<span class="news-gallery__desc">Infinite Scrolling Is Not for Every Website</span>
+						</a>
+					</div>
+					<div class="news-gallery__item">
+						<a href="#" class="news-gallery__link"><img src="img/news-pic-4.jpg" alt="pic-4">
+							<span class="news-gallery__desc">Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid</span>
+						</a>
+					</div>
+					<div class="news-gallery__item">
+						<a href="#" class="news-gallery__link"><img src="img/news-pic-5.jpg" alt="pic-5">
+							<span class="news-gallery__desc">University Websites: Top 10 Design Guidelines</span>
+						</a>
+					</div>
+					<div class="news-gallery__item">
+						<a href="#" class="news-gallery__link"><img src="img/news-pic-6.jpg" alt="pic-6">
+							<span class="news-gallery__desc">University Websites: Top 10 Design Guidelines copy</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#head" class="to-top js-scroll-top">top</a>
+	</div>
+
+	<script>
+		var btn = document.querySelector('.js-btn');
+		var dropdown = document.querySelector('.js-menu');
+		var navLink = document.querySelectorAll('.js-nav-link');
+		var scrollLink = document.querySelector('.js-scroll-top');
+
+		function clear(arr) {
+			arr.forEach(function(e) {
+				e.classList.remove('is-active');
+			});
+		}
+
+		btn.addEventListener('click', function () {
+			if (dropdown.hasAttribute('style')) {
+				dropdown.removeAttribute('style');
+			} else {
+				dropdown.style.display = 'block';
+			}
+		});
+
+		window.onresize = function(e) {
+			var w = document.body.clientWidth;
+			if (w > 767 && dropdown.hasAttribute('style')) {
+				dropdown.removeAttribute('style');
+			}
+		}
+
+		navLink.forEach(function(e) {
+			e.addEventListener('click', function () {
+				clear(navLink);
+				this.classList.add('is-active');
+			});
+		});
+
+	</script>
+</body>
+</html>

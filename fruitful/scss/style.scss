@@ -1,0 +1,387 @@
+@import 'normalize';
+@import 'settings';
+
+input,
+button {
+	border: none;
+	outline: none;
+}
+
+.wrap {
+	position: relative;
+	background-color: $content-color;
+	font-family: $serif;
+}
+
+.container {
+	max-width: 1152px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	&__top {
+		padding: 28px 0 33px;
+		background-color: $white-color;
+	}
+	&__content {
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-align-items: center;
+		align-items: center;
+
+	}
+	&__bottom {
+		position: relative;
+		background-color: $dark-color;
+		& > .container > .header__content {
+			@media (max-width: $tablet-breakpoint) {
+				height: 72px;
+				-webkit-justify-content: flex-end;
+				justify-content: flex-end;
+			}
+		}
+		@media (max-width: $tablet-breakpoint) {
+			height: 72px;
+		}
+	}
+}
+
+.dropdown-btn {
+	@include pos('topLeft', 50%, 20px);
+	width: 18px;
+	height: 14px;
+	display: none;
+	color: $white-color;
+	transform: translateY(-50%);
+	&:after {
+		@include pos('topLeft', 50%, 0);
+		@include block-create(100%, 2px, currentColor);
+		content: "";
+		box-shadow: 0 6px 0 0 currentColor,
+		0 -6px 0 0 currentColor;
+		transform: translateY(-50%);
+	}
+	@media (max-width: $tablet-breakpoint) {
+		display: block;
+	}
+}
+
+.logo-text {
+	@include text-config(48px, 48px, $fruit-color);
+	margin: 0;
+	font-family: $oswald;
+	text-transform: uppercase;
+	text-decoration: none;
+	& > span {
+		@include text-config(18px, 18px);
+		text-transform: lowercase;
+		font-style: italic;
+		opacity: 0.5;
+		@media (max-width: $tablet-breakpoint) {
+			display: block;
+		}
+	}
+	@media (max-width: $mobile-breakpoint) {
+		font-size: 38px;
+	}
+}
+
+.login-link {
+	@include text-config(13px, 13px);
+	position: relative;
+	margin-right: 30px;
+	font-style: italic;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+	@media (max-width: $mobile-breakpoint) {
+		margin-right: 10px;
+	}
+}
+
+.key-ic {
+	@include pos('bottomRight', 3px, 100%);
+	width: 13px;
+	height: 13px;
+	margin-right: 10px;
+	color: $fruit-color;
+	&:before {
+		@include pos('topLeft', 0, 3px);
+		@include block-create(2px, 2px, currentColor);
+		content: "";
+		box-shadow: 2px 0 0 0 currentColor,
+		3px 1px 0 0 currentColor,
+		3px 3px 0 0 currentColor,
+		2px 4px 0 0 currentColor,
+		1px 5px 0 0 currentColor,
+		0 6px 0 0 currentColor,
+		-2px 6px 0 0 currentColor,
+		-3px 5px 0 0 currentColor,
+		-3px 3px 0 0 currentColor,
+		-2px 2px 0 0 currentColor,
+		-1px 1px 0 0 currentColor;
+	}
+	&:after {
+		@include pos('bottomRight', 0, 0);
+		@include block-create(2px, 2px, currentColor);
+		content: "";
+		box-shadow: -1px -1px 0 0 currentColor,
+		-2px -2px 0 0 currentColor,
+		-3px -3px 0 0 currentColor,
+		-4px -4px 0 0 currentColor,
+		-5px -5px 0 0 currentColor,
+		-6px -6px 0 0 currentColor,
+		-2px -3px 0 0 currentColor,
+		-1px -4px 0 0 currentColor,
+		-1px -5px 0 0 currentColor,
+		0 -4px 0 0 currentColor;
+	}
+}
+
+.contact__btn {
+	@include text-config(13px, 13px, $white-color);
+	min-width: 190px;
+	padding: 16px 10px;
+	background-color: $fruit-color;
+	font-style: italic;
+	text-transform: uppercase;
+	transition: 0.3s;
+	&:hover {
+		background-color: #BB3C11;
+	}
+	& > span {
+		@media (max-width: $mobileL-breakpoint) {
+			display: none;
+		}
+	}
+	@media (max-width: $mobileL-breakpoint) {
+			min-width: 50px;
+			height: 40px;
+			padding: 0;
+			border-radius: 5px;
+			text-align: center;
+		}
+}
+
+.envelope-ic {
+	width: 20px;
+	display: none;
+	@media (max-width: $mobileL-breakpoint) {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.nav {
+	overflow: hidden;
+	&__link {
+		@include text-config(18px, 72px, $white-color);
+		display: block;
+		padding: 0 18px;
+		float: left;
+		font-family: $oswald;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: 0.2s;
+		&.is-active {
+			background-color: $fruit-color;
+		}
+		&:hover {
+			background-color: $fruit-color;
+		}
+		@media (max-width: $tablet-breakpoint) {
+			float: none;
+		}
+	}
+	@media (max-width: $tablet-breakpoint) {
+		@include pos('topLeft', 100%, 0);
+		right: 0;
+		background-color: rgba(0,0,0,.9);
+		overflow: visible;
+		display: none;
+	}
+}
+
+.form-group {
+	position: relative;
+	width: 269px;
+	&__field {
+		@include text-config(16px, 16px);
+		@include input-placeholder {
+			font-family: $oswald;
+			font-size: 14px;
+			text-transform: uppercase;
+			opacity: 0.2;
+		}
+		width: 100%;
+		height: 40px;
+		padding: 0;
+		padding: 0 40px 0 14px ;
+		&:active + .form-group__search-btn,
+		&:focus + .form-group__search-btn {
+			color: $fruit-color;
+		}
+	}
+	&__search-btn {
+		@include pos('topRight', 50%, 12px);
+		@include block-create(17px, 17px, transparent);
+		color: $search-ic-color;
+		transform: translateY(-50%);
+		&:before {
+			@include pos('topLeft', 0, 0);
+			content: "";
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			border: 2px solid currentColor;
+		}
+		&:after {
+			@include pos('bottomRight', 0, 0);
+			@include block-create(2px, 2px, currentColor);
+			content: "";
+			box-shadow: -1px -1px 0 0 currentColor,
+			-2px -2px 0 0 currentColor,
+			-3px -3px 0 0 currentColor,
+			-4px -4px 0 0 currentColor;
+		}
+	}
+	@media (max-width: $mobile-breakpoint) {
+		width: 80%;
+	}
+}
+
+.content {
+	&__title {
+		@include text-config(48px, 60px);
+		margin-top: 50px;
+		margin-bottom: 40px;
+		width: 65%;
+		font-family: $oswald;
+		font-weight: 400;
+		@media (max-width: $tablet-breakpoint) {
+			width: 80%;
+		}
+		@media (max-width: $mobileL-breakpoint) {
+			width: 100%;
+		}
+		@media (max-width: $mobile-breakpoint) {
+			font-size: 38px;
+			line-height: 50px;
+		}
+	}
+	&__paragraph {
+		@include text-config(24px, 36px);
+		margin-bottom: 40px;
+		width: 75%;
+		@media (max-width: $tablet-breakpoint) {
+			width: 90%;
+		}
+		@media (max-width: $mobileL-breakpoint) {
+			width: 100%;
+		}
+		@media (max-width: $mobile-breakpoint) {
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+	&__features {
+		margin-bottom: 60px;
+		padding-left: 20px;
+		&-item {
+			@include text-config(18px, 27px);
+		}
+	}
+	&__list-title {
+		@include text-config(18px, 27px);
+		margin: 0;
+		font-weight: 700;
+	}
+}
+
+.news-title {
+	@include text-config(14px, 27px, $fruit-color);
+	margin-bottom: 10px;
+	font-family: $oswald;
+	text-transform: uppercase;
+}
+
+.news-gallery {
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding-bottom: 200px;
+	margin-left: -10px;
+	margin-right: -10px;
+	&__item {
+		width: 192px;
+		padding: 10px;
+		@media (max-width: $tablet-breakpoint) {
+			width: 25%;
+		}
+		@media (max-width: $mobileL-breakpoint) {
+			width: 33.33%;
+			text-align: center;
+		}
+		@media (max-width: $mobile-breakpoint) {
+			width: 50%;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		& > img {
+			width: 100%;
+			max-width: 172px;
+			height: auto;
+		}
+	}
+	&__desc {
+		@include text-config(18px, 20px);
+		font-family: $oswald;
+		font-weight: 300;
+		
+	}
+	@media (max-width: $tablet-breakpoint) {
+		flex-wrap: wrap;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+	}
+	@media (max-width: $tablet-breakpoint) {
+		padding-bottom: 100px;
+	}
+}
+
+.to-top {
+	@include pos('bottomRight', 50px, 25px);
+	@include text-config(14px, 16.8px);
+	width: 32px;
+	text-align: right;
+	font-family: $oswald;
+	font-weight: 300;
+	text-decoration: none;
+	transition: 0.2s;
+	&:before {
+		@include pos('topLeft', 4px, 4px);
+		@include block-create(2px, 2px, currentColor);
+		content: "";
+		box-shadow: 1px 1px 0 0 currentColor,
+		2px 2px 0 0 currentColor,
+		3px 3px 0 0 currentColor,
+		4px 4px 0 0 currentColor,
+		-1px 1px 0 0 currentColor,
+		-2px 2px 0 0 currentColor,
+		-3px 3px 0 0 currentColor,
+		-4px 4px 0 0 currentColor;
+		opacity: 0.6;
+	}
+	&:hover {
+		color: $fruit-color;
+	}
+}
