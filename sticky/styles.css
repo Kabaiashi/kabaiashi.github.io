@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+      height: 2000px;
+      margin:0px;
+      background: #fff;
+      color: #333;
+      font: 14px/2 Roboto, Verdana, sans-serif;
+}
+
+section:first-child {
+  margin-top: 50px;
+}
+
+.header--initial {
+  background: yellow linear-gradient(to right, grey, transparent, grey);
+}
+
+.header--main-start {
+  background: grey linear-gradient(to right, grey, yellow);
+}
+
+.header--main-end {
+  background: yellow linear-gradient(to right, yellow, grey);
+}
+
+.header--final {
+  background: grey linear-gradient(to right, yellow, transparent, yellow);
+}
+
+p {
+  padding: 10px;
+}
+
+.header{
+  width:50%;
+  height: 50px;
+  margin: auto;
+  background-color:#333;
+}
+
+.placeholder{
+  width: 50%;
+  height: 300px;
+  margin: auto;
+  overflow: auto;
+}
