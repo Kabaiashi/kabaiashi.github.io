@@ -53,7 +53,7 @@
 
 .main-page {
   height: 100vh;
-  background: url("../../img/IMG_6760.jpg") no-repeat;
+  background: url("./img/IMG_6760.jpg") no-repeat;
   background-size: cover;
   background-position: 10% 20%;
   position: relative; }
