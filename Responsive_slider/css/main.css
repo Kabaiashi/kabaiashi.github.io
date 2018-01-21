@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.page {
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif; }
+  .page__inner {
+    width: 100%;
+    padding: 26px; }
+
+.slider__slider-item {
+  width: 362px;
+  height: 248px;
+  padding: 18px;
+  background: #f9f9f9;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: space-between;
+      align-items: space-between; }
+
+.slider-item__inner {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.slider-item__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 70%; }
+
+.slider-item__btn {
+  background: #f16600;
+  color: #fff; }
+
+.slider-item__user-achievement {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  border-top: 1px solid #009688;
+  border-bottom: 1px solid #009688;
+  padding: 10px 6px 6px 3px; }
+
+.slider-item__footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: row wrap;
+      flex: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.header {
+  width: 63%;
+  padding-left: 20px; }
+  .header__user-image__heading {
+    width: 53%; }
+
+.heading__user-name {
+  font: 18px 'Open Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #f16600; }
+
+.heading__user-rating {
+  font-size: 14px;
+  font-weight: 300;
+  color: #428c81; }
+
+.user-achievement--socks {
+  color: #333333; }
+
+.user-achievement--cats {
+  color: #00776a; }
+
+.success-rate {
+  width: 50%; }
+  .success-rate__percent {
+    color: #00776a;
+    font: 700 16px 'Open Sans', sans-serif; }
+    .success-rate__percent:after {
+      content: 'Success rate';
+      color: #7a7a7a;
+      padding-left: 8px;
+      font-weight: 300; }
+
+.progress-wrap {
+  width: 100%; }
+
+.progress-bar {
+  width: 70%;
+  height: 10px;
+  background: #d9d9d9;
+  border-radius: 3px;
+  margin-top: 6px; }
+
+.progress-bar__inner {
+  height: 100%;
+  background-color: #00776a;
+  border-radius: 3px;
+  text-align: right; }
+  .progress-bar__inner--Peter {
+    width: 60%; }
+  .progress-bar__inner--Anna {
+    width: 51%; }
+  .progress-bar__inner--Lisa {
+    width: 26%; }
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 30%;
+  padding: 8px 18px;
+  border: 1px solid transparent;
+  text-align: center;
+  font: 900 16px 'Open Sans', sans-serif;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s; }
+  .btn--rounded {
+    border-radius: 3px; }
+
+/*# sourceMappingURL=main.css.map */

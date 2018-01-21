@@ -1,0 +1,184 @@
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+}
+
+.page {
+	background: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
+
+	&__inner {
+		width: 100%;
+		padding: 26px;
+	}
+}
+
+.slider {
+	// width: 100%;
+	// overflow: hidden;
+
+
+	&__slider-item {
+		width: 362px;
+		height: 248px;
+		padding: 18px;
+		background: #f9f9f9;
+		display: flex;
+		align-items: space-between;
+	}
+}
+
+.slider-item {
+
+	&__inner {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	&__header {
+		display: flex;
+        justify-content: space-between;
+        width: 70%;
+	}
+
+	&__btn {
+		background: #f16600;
+		color: #fff;
+	}
+
+	&__user-achievement {
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+		font-weight: 600;
+		border-top: 1px solid #009688;
+		border-bottom: 1px solid #009688;
+		padding: 10px 6px 6px 3px;
+	}
+
+	&__footer {
+		display: flex;
+		flex: row wrap;
+		justify-content: space-between;
+	}
+}
+
+.header {
+	width: 63%;
+	padding-left: 20px;
+
+    &__user-image {
+    	
+
+    	&__heading {
+    		width: 53%;
+
+
+    	}
+    }
+
+}
+
+.heading {
+	
+	&__user-name {
+	font: 18px 'Open Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: #f16600;
+	}
+
+	&__user-rating {
+		font-size: 14px;
+		font-weight: 300;
+		color: #428c81;
+	}
+
+
+}
+
+.user-achievement {
+
+	&--socks {
+		color: #333333;
+	}
+
+	&--cats {
+		color: #00776a;
+	}
+}
+
+.success-rate {
+	width: 50%;
+
+	&__percent {
+		color: #00776a;
+		font: 700 16px 'Open Sans', sans-serif;
+		
+
+		&:after {
+			content: 'Success rate';
+			color: #7a7a7a;
+			padding-left: 8px;
+			font-weight: 300;
+		}
+	}
+}
+
+.progress-wrap {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 70%;
+  height: 10px;
+  background: #d9d9d9;
+  border-radius: 3px;
+  margin-top: 6px;
+}
+
+
+.progress-bar__inner {
+    height: 100%;
+    background-color: #00776a;
+    border-radius: 3px;
+    text-align: right;
+
+    &--Peter {
+    	width: 60%;
+    }
+
+    &--Anna {
+    	width: 51%;
+    }
+
+    &--Lisa {
+    	width: 26%;
+    }
+    
+}
+
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 30%;
+	padding: 8px 18px;
+	border: 1px solid transparent;
+	text-align: center; 
+	font: 900 16px 'Open Sans', sans-serif;
+	letter-spacing: 0.01em;
+	text-decoration: none;
+	text-transform: uppercase;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+
+	&--rounded {
+		border-radius: 3px;
+	}
+}
