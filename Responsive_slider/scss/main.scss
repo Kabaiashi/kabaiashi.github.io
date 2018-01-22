@@ -6,32 +6,35 @@
 }
 
 .page {
-	background: #f2f2f2;
+	background: #ccc;
 	font-family: 'Open Sans', sans-serif;
 
 	&__inner {
-		width: 100%;
-		padding: 26px;
+		max-width: 1148px;
+		margin: 0 auto; 
+		padding: 6px;
 	}
 }
 
 .slider {
-	// width: 100%;
-	// overflow: hidden;
-
+	transition: opacity 1.5s;
 
 	&__slider-item {
-		width: 362px;
-		height: 248px;
-		padding: 18px;
+		padding: 18px 15px;
 		background: #f9f9f9;
 		display: flex;
 		align-items: space-between;
+		opacity: 0.5;
+		margin: 0 30px;
+		&.slick-current {
+		  opacity: 1;
+		}
 	}
 }
 
 .slider-item {
-
+	width: 340px;
+		
 	&__inner {
 		width: 100%;
 		display: flex;
@@ -68,17 +71,19 @@
 }
 
 .header {
-	width: 63%;
-	padding-left: 20px;
+	width: 100%;
 
     &__user-image {
     	
 
-    	&__heading {
-    		width: 53%;
+    	
+    }
+
+    &__heading {
+    		width: 63%;
+    		padding-left: 20px;
 
 
-    	}
     }
 
 }
