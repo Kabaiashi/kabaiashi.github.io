@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.page {
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif; }
+
+.sl {
+  width: 1212px;
+  margin: 50px auto;
+  position: relative; }
+  .sl__nav {
+    height: 40px;
+    width: 28.3%;
+    background: #009688;
+    z-index: 1001;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-57%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    border-radius: 0 0 6px 6px; }
+    .sl__nav-btn {
+      height: 28px;
+      width: 28px;
+      background: #b2dfdb;
+      display: inline-block;
+      margin: 5px;
+      transition: background .3s;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      position: relative; }
+      .sl__nav-btn:after {
+        width: 10px;
+        height: 10px;
+        content: " ";
+        top: 50%;
+        left: 50%;
+        background: #1b1b1b;
+        z-index: 1002; }
+      .sl__nav-btn:hover {
+        background: #fff; }
+  .sl-inner {
+    width: 1162px;
+    height: 340px;
+    padding: 12px 25px 22px; }
+  .sl__item {
+    width: 360px;
+    background: #f9f9f9;
+    opacity: .5;
+    margin: 0 15px;
+    transition: opacity .7s;
+    border-radius: 5px; }
+    .sl__item-inner {
+      padding: 18px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+    .sl__item-line {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      .sl__item-line--achievements {
+        font-size: 16px;
+        font-weight: 600;
+        border-top: 1px solid #009688;
+        border-bottom: 1px solid #009688;
+        padding: 10px 6px 6px 3px;
+        margin: 26px 0; }
+    .sl__item.slick-current {
+      opacity: 1;
+      box-shadow: 3px 3px 15px #d9d9da, -3px -3px 15px #d9d9da; }
+    .sl__item.slick-slide {
+      outline: none; }
+  .sl__btn {
+    background: #f16600;
+    color: #fff; }
+    .sl__btn:hover {
+      background: #ff7b1a; }
+
+.header__text {
+  width: 73%;
+  padding-left: 20px; }
+  .header__text-name {
+    font: 18px 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #f16600; }
+  .header__text-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: #428c81; }
+
+.socks {
+  color: #333333; }
+
+.cats {
+  color: #00776a; }
+
+.progress {
+  width: 50%; }
+  .progress__desc {
+    color: #00776a;
+    font: 700 16px 'Open Sans', sans-serif; }
+    .progress__desc:after {
+      content: 'Success rate';
+      color: #7a7a7a;
+      padding-left: 8px;
+      font-weight: 300; }
+  .progress__bar {
+    width: 75%;
+    height: 10px;
+    background: #d9d9d9;
+    border-radius: 3px;
+    margin-top: 6px; }
+    .progress__bar-inner {
+      height: 100%;
+      background-color: #00776a;
+      border-radius: 3px;
+      text-align: right; }
+      .progress__bar-inner--Peter {
+        width: 60%; }
+      .progress__bar-inner--Anna {
+        width: 51%; }
+      .progress__bar-inner--Lisa {
+        width: 26%; }
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 30%;
+  padding: 8px 18px;
+  border: 1px solid transparent;
+  text-align: center;
+  font: 900 16px 'Open Sans', sans-serif;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s; }
+  .btn--rounded {
+    border-radius: 4px; }
+
+/*# sourceMappingURL=main.css.map */
