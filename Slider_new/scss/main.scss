@@ -12,9 +12,7 @@
 
 .sl {
 	width: 1212px;
-	// max-height: 340px;
 	margin: 50px auto;
-	// border: 1px solid black;
 	position: relative;
 
 	&__nav {
@@ -65,12 +63,10 @@
 		width: 1162px;
 		height: 340px;
 		padding: 12px 25px 22px;
-		// border: 1px solid red;
 	}
 
 	&__item {
 		width: 360px;
-		// border: 1px solid green;
 		// padding: 18px;
 		background: #f9f9f9;
 		opacity: .5;
@@ -80,12 +76,10 @@
 
 		&-inner {
 			padding: 18px;
-			// border: 1px solid red;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
 			flex: 1 0 auto;
-			// width: 100%;
 		}
 
 		&-line {
@@ -106,7 +100,6 @@
 		    opacity: 1;
 		    box-shadow: 3px 3px 15px #d9d9da,
 		               -3px -3px 15px #d9d9da;
-		    // margin: auto;
 		}
 
 		&.slick-slide {
