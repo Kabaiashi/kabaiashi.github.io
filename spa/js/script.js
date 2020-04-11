@@ -108,43 +108,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //Form submit
 
-    // let message = {
-    //     loading: "Loading...",
-    //     success: "Thank you. We will contact you soon",
-    //     failure: "Something went wrong"
-    // };
-
-    // let form = document.querySelector('.main-form'),
-    //     input = form.getElementsByTagName('input'),
-    //     statusMessage = document.createElement('div');
-
-    // statusMessage.classList.add('status');
-
-    // form.addEventListener('submit', function(event) {
-    //     event.preventDeafault();
-    //     form.appendChild(statusMessage);
-
-    //     let request = new XMLHttpRequest();
-    //     request.open('POST', 'server.php');
-    //     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-    //     let formData = new FormData(form);
-    //     request.send(formData);
-
-    //     request.addEventListener('readystatechange', function() {
-    //         if (request.readyState < 4) {
-    //             statusMessage.innerHTML = message.loading;
-    //         } else if(request.readyState === 4 && request.status == 200) {
-    //             statusMessage.innerHTML = message.success;
-    //         } else {
-    //             statusMessage.innerHTML = message.failure;
-    //         }
-    //     });
-
-    //     for (let i = 0; i < input.length; i++) {
-    //         input[i].value = '';
-    //     }
-    // });
+    
     let message = {
         loading: 'Loading...',
         success: 'Thank you! We will contact you back soon.',
@@ -153,6 +117,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
     let form = document.querySelector('.main-form'),
         input = form.getElementsByTagName('input'),
+        bigForm = document.getElementById('form'),
+        bfInputs = bigForm.getElementsByTagName('input'),
         statusMessage = document.createElement('div');
 
     statusMessage.classList.add('status');
@@ -165,7 +131,7 @@ window.addEventListener('DOMContentLoaded', function() {
         request.open('POST', 'server.php');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
-        let formData = new FormData(form);
+        let formData = new FormData(bigForm);
 
         let obj = {};
         formData.forEach(function (value, key) {
@@ -187,6 +153,39 @@ window.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 0; i < input.length; i++) {
             input[i].value = '';
+        }
+    });
+
+    bigForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        bigForm.appendChild(statusMessage);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        let formData = new FormData(bigForm);
+
+        let obj = {};
+        formData.forEach(function (value, key) {
+            obj[key] = value;
+        });
+        let json = JSON.stringify(obj);
+
+        request.send(json);
+
+        request.addEventListener('readystatechange', function () {
+            if (request.readyState < 4) {
+                statusMessage.innerHTML = message.loading;
+            } else if (request.readyState === 4 && request.status == 200) {
+                statusMessage.innerHTML = message.success;
+            } else {
+                statusMessage.innerHTML = message.failure;
+            }
+        });
+
+        for (let i = 0; i < bfInputs.length; i++) {
+            bfInputs[i].value = '';
         }
     });
     
