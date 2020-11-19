@@ -1,0 +1,223 @@
+/*
+ 0 - 600px:       Phone
+ 600 - 900px:     Tablet portrait
+ 900 - 1200px:    Tablet landscape
+ [1200 - 1800px]: normal styles apply
+ 1800px +:        Big desktop
+ */
+/*
+ $breakboint argument choices:
+ - phone
+ - tab-port
+ - tab-land
+ - big-desktop
+
+ ORDER: base + typography > general layout + grid > page layout > components
+
+ 1em = 16px
+ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 55%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: #E5E5E5;
+  font-family: 'Inter', sans-serif;
+  color: #475461; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-center-block {
+  margin: 0 auto; }
+
+.u-center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+.u-pd-10 {
+  padding: 1rem; }
+
+.topbar {
+  grid-column: sidebar-start / -1; }
+
+.content {
+  text-align: center;
+  padding: 1.4rem;
+  box-shadow: 0px 14px 60px rgba(0, 0, 0, 0.09);
+  border-radius: 1.4rem;
+  background-color: #FFFFFF; }
+  .content__header, .content__main, .content__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    background-color: #F9F9F9;
+    margin-top: 1.3%;
+    border: 1px dashed #9DA8B4;
+    border-radius: 1.4rem; }
+  .content h3, .content h4 {
+    color: #C2CCD6; }
+  .content h3 {
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 4.05rem; }
+  .content h4 {
+    font-size: 1.4rem;
+    line-height: 1.7rem; }
+  .content__header {
+    min-height: 13%;
+    margin-top: 0; }
+  .content__main {
+    min-height: 64%; }
+  .content__footer {
+    min-height: 17%; }
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 1.9rem;
+  background-color: #FFFFFF;
+  border-radius: 1.4rem;
+  box-shadow: 0px 14px 60px rgba(0, 0, 0, 0.09); }
+  .sidebar > * {
+    width: 100%; }
+  .sidebar__header, .sidebar__footer {
+    padding: 2.5rem 0; }
+  .sidebar h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-indent: 2rem; }
+  .sidebar a, .sidebar button {
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475461;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding-left: 3.7rem; }
+  .sidebar__header {
+    height: -webkit-min-content;
+    height: min-content;
+    border-bottom: 1px solid #E3E6E8; }
+  .sidebar__menu {
+    padding: 2.8rem 2.8rem; }
+  .sidebar__footer {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    background-image: linear-gradient(105deg, #F9F9F9 65.7%, #475461 66% 75.7%, #C2CCD6 76%);
+    border-radius: 0 0 1.4rem 1.4rem;
+    padding-left: 2.6rem; }
+    .sidebar__footer a {
+      padding-left: 3.7rem;
+      font-weight: 600;
+      position: relative;
+      will-change: color;
+      transition: color .2s; }
+      .sidebar__footer a .uil {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 2.1rem; }
+      .sidebar__footer a:hover {
+        color: #6D33FF; }
+  .sidebar .side-list ul {
+    list-style: none; }
+  .sidebar .side-list__item {
+    display: block;
+    position: relative;
+    padding: 2.4rem 2.5rem 2.6rem;
+    border: 1px solid #E3E6E8; }
+    .sidebar .side-list__item:first-child, .sidebar .side-list__item:nth-last-child(2) {
+      margin-bottom: 1.4rem; }
+    .sidebar .side-list__item:first-child, .sidebar .side-list__item:last-child {
+      border-radius: 1.4rem; }
+    .sidebar .side-list__item:nth-child(2) {
+      border-top-left-radius: 1.4rem;
+      border-top-right-radius: 1.4rem; }
+    .sidebar .side-list__item:nth-last-child(2) {
+      border-bottom-left-radius: 1.4rem;
+      border-bottom-right-radius: 1.4rem;
+      color: #6D33FF;
+      position: relative; }
+      .sidebar .side-list__item:nth-last-child(2) button {
+        padding-left: 0;
+        color: #6D33FF; }
+        .sidebar .side-list__item:nth-last-child(2) button .uil {
+          position: absolute;
+          top: 50%;
+          right: 1.3rem;
+          transform: translateY(-50%);
+          font-size: 2.1rem; }
+    .sidebar .side-list__item:nth-child(2), .sidebar .side-list__item:nth-child(3), .sidebar .side-list__item:nth-child(4) {
+      border-bottom: none; }
+      .sidebar .side-list__item:nth-child(2) .uil:not(:first-child), .sidebar .side-list__item:nth-child(3) .uil:not(:first-child), .sidebar .side-list__item:nth-child(4) .uil:not(:first-child) {
+        position: absolute;
+        left: calc(100% - 1rem); }
+    .sidebar .side-list__item a {
+      position: relative; }
+      .sidebar .side-list__item a .uil {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 2.1rem; }
+    .sidebar .side-list__item:last-child .uil {
+      transform: rotate(180deg) translateY(50%); }
+    .sidebar .side-list__item:hover {
+      background-color: #f2f2f2; }
+  .sidebar .side-list__link span {
+    display: inline-block;
+    max-width: 18ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.container {
+  max-width: 144rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5vh minmax(max-content, 97vh);
+      grid-template-rows: 5vh minmax(max-content, 97vh);
+  -ms-grid-columns: [sidebar-start] 25vw [sidebar-end content-start] 70vw [content-end];
+      grid-template-columns: [sidebar-start] 25vw [sidebar-end content-start] 70vw [content-end];
+  gap: 1.4rem;
+  padding: 0 1.4rem;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=main.css.map */

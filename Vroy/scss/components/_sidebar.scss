@@ -1,0 +1,156 @@
+.sidebar {
+    grid-column: sidebar-start / sidebar-end;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height: 1.9rem;
+    background-color: $color-bg-primary;
+    border-radius: 1.4rem;
+    box-shadow: $boxShadow;
+
+    & > * {
+        width: 100%;
+    }
+
+    &__header, &__footer {
+        padding: 2.5rem 0;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-indent: 2rem;
+    }
+
+    a, button {
+        display: block;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-text-link;
+        text-align: left;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        padding-left: 3.7rem;
+    }
+
+    &__header {
+        height: min-content;
+        border-bottom: 1px solid $color-bd-light;
+    }
+
+    &__menu {
+        padding: 2.8rem 2.8rem;
+    }
+
+    &__footer {
+        align-self: flex-end;
+        background-image: linear-gradient(105deg, $color-bg-secondary 65.7%, 
+                                                  $color-text-primary 66% 75.7%, 
+                                                  $color-text-secondary 76%);
+        border-radius: 0 0 1.4rem 1.4rem;
+        padding-left: 2.6rem;
+
+        a {
+            padding-left: 3.7rem;
+            font-weight: 600;
+            position: relative;
+            will-change: color;
+            transition: color .2s;
+            .uil {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    font-size: 2.1rem;
+            }
+            &:hover {
+                color: $color-accent;
+            }
+        }
+        
+    }
+
+    .side-list {
+        ul {
+            list-style: none;
+        }
+
+        &__item {
+            display: block;
+            position: relative;
+            padding: 2.4rem 2.5rem 2.6rem;
+            border: 1px solid $color-bd-light;
+            &:first-child, &:nth-last-child(2) {
+                margin-bottom: 1.4rem;
+            }
+            &:first-child, &:last-child {
+                border-radius: 1.4rem;
+            }
+            &:nth-child(2) {
+                border-top-left-radius: 1.4rem;
+                border-top-right-radius: 1.4rem;
+            }
+            &:nth-last-child(2) {
+                border-bottom-left-radius: 1.4rem;
+                border-bottom-right-radius: 1.4rem;
+                color: $color-accent;
+                position: relative;
+                
+                button {
+                    padding-left: 0;
+                    color: $color-accent;
+                    
+                    .uil {
+                        position: absolute;
+                        top: 50%;
+                        right: 1.3rem;
+                        transform: translateY(-50%);
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+            &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                border-bottom: none;
+                .uil {
+                    &:not(:first-child) {
+                        position: absolute;
+                        left: calc(100% - 1rem);
+                    }
+                }
+            }
+            a {
+                position: relative;
+                .uil {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    font-size: 2.1rem;
+                }
+
+            }
+            &:last-child {
+                .uil {
+                    transform: rotate(180deg) translateY(50%);
+                }
+            }
+            &:hover {
+                background-color: darken($color-bg-primary, 5%);
+            }
+            
+        }
+        &__link {
+            
+            span {
+                display: inline-block;
+                max-width: 18ch;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+        }
+    }
+}
