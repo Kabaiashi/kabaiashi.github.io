@@ -208,7 +208,6 @@ body {
     text-overflow: ellipsis; }
 
 .container {
-  max-width: 144rem;
   width: 100%;
   display: -ms-grid;
   display: grid;
