@@ -1,0 +1,55 @@
+.admin-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-bg-secondary;
+    padding: 3rem 2rem 1.5rem;
+
+    .info-block {
+        width: 30%;
+
+        &__contacts {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 6px;
+
+            a {
+                text-decoration: none;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                color: $color-text-primary;
+
+                &:first-child {
+                    text-shadow: $boxShadow;
+                }
+
+            }
+        }
+
+        &__search {
+            width: 100%;
+            margin-top: 1rem;
+            background-color: transparent;
+            padding: 1rem;
+            border: 1px solid $color-border-primary;
+            border-radius: .6rem;
+
+            &:focus {
+                outline: none;
+                box-shadow: $boxShadow;
+
+                &::placeholder {
+                    display: none;
+                }
+            }
+
+            &:focus &::placeholder {
+                display: none;
+            }
+
+            &::placeholder {
+                font-size: 1.6rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+}
