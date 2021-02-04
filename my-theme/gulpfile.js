@@ -10,7 +10,7 @@ gulp.task('sass', function() {
     return gulp.src('./sass/styles.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(rename('styles.scss.liquid'))
+        .pipe(rename('styles.css.liquid'))
         .pipe(replace('"{{', '{{'))
         .pipe(replace('}}"', '}}'))
         .pipe(gulp.dest('./assets/'));
@@ -18,5 +18,5 @@ gulp.task('sass', function() {
     
 gulp.task('default', function() {
         
-    gulp.watch(['./sass/**/*.scss'], ['sass']);
+    gulp.watch(['./sass/**/*.scss'], gulp.series('sass'));
 });
