@@ -7,10 +7,10 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
     
 gulp.task('sass', function() {
-    return gulp.src('./sass/styles.scss')
+    return gulp.src('./sass/styles.css.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(rename('styles.css.liquid'))
+        .pipe(rename('styles.scss.css'))
         .pipe(replace('"{{', '{{'))
         .pipe(replace('}}"', '}}'))
         .pipe(gulp.dest('./assets/'));
