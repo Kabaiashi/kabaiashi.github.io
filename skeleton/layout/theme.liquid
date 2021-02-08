@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="">
   <link rel="canonical" href="{{ canonical_url }}">
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
 
   <title>{{ shop.name }}</title>
 
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+  {% section 'header' %}
   {{ content_for_layout }}
 </body>
 </html>
