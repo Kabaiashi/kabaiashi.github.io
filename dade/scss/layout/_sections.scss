@@ -1,0 +1,512 @@
+.site-container {
+    max-width: 135rem;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+section {
+    margin-top: 5rem; 
+    padding: 0 0 5rem;
+
+    @include respond(phone) {
+      margin-top: 3rem;
+    }
+}
+
+.section-header {
+    margin: 0 auto;
+    padding: 2rem 4rem 4rem;
+    text-align: center;
+    font-size: 4.2rem;
+    line-height: 1.23;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3.3rem;
+    }
+}
+
+.section-about {
+    
+    &__description {
+        width: 57%;
+        margin-left: auto;
+
+        p {
+            width: 70%;
+            font-size: 2.4rem;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            line-height: 1.55;
+
+            &:not(:last-child) {
+                margin-bottom: 2.4rem;
+            }
+
+            @include respond(tab-port) {
+              width: 100%;
+              text-align: center;
+            }
+        }
+
+        @include respond(tab-port) {
+          width: 100%;
+          padding: 0 1rem;
+        }
+    }
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-top: 1px solid rgba($color-black, .2);
+    border-bottom: 1px solid rgba($color-black, .2);
+    padding: 6rem 0;
+    margin-top: 2rem;
+
+    h4 {
+        @extend .btn;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+
+        &.moto {
+          background-color: $color-main;
+          color: $color-white;
+          border: none;
+        }
+    }
+
+    p {
+        font-size: 3rem;
+        line-height: 1.35;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.section-portfolio {
+    height: 100vh;
+    margin-top: 5rem;
+
+    @include respond(tab-land) {
+      height: 90vh;
+    }
+
+    @include respond(tab-port) {
+      height: auto;
+    }
+
+    h4 {
+      font-size: 2.4rem;
+      text-align: center;
+      line-height: 1.55;
+      letter-spacing: .1rem;
+      font-weight: 300;
+      padding-bottom: 3rem;
+      margin: 0 auto;
+
+      @include respond(tab-port) {
+        width: 85%;
+      }
+    }
+
+    .grid-gallery {
+
+        &__list {
+
+            &--portfolio {
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: repeat(1, 80%);
+              grid-gap: 5rem;
+
+              @include respond(tab-land) {
+                grid-template-rows: repeat(1, 75%);
+                grid-gap: 4rem;
+              }
+
+              @include respond(tab-port) {
+                grid-template-columns: repeat(1, 85%);
+                grid-template-rows: repeat(3, 75vh);
+                grid-gap: 7rem;
+              }
+
+              @include respond(phone) {
+                grid-template-rows: repeat(3, 60vh);
+              }
+            }
+        }
+
+        &__item {
+            
+            &--portfolio {
+              box-shadow: 0 0 1rem rgba($color-main, .4);
+              transition: box-shadow .2s;
+
+              &:hover {
+                box-shadow: 0 2rem 2rem rgba($color-main, .4);
+              }
+
+              figure {
+                height: 55%;
+                overflow: scroll;
+                  
+                  picture {
+                    width: 100%;
+                    height: auto;
+                  }
+
+                  img {
+                    width: 100%;
+                  }
+
+                  figcaption {
+                    height: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    background-color: $color-white;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    font-size: 2rem;
+                    line-height: 1.35;
+                    font-weight: 300;
+                    letter-spacing: .1rem;
+                    text-align: center;
+                    padding: 1rem 2rem;
+                    border-top: 1px solid $color-main;
+
+                    strong {
+                      font-size: 2.1rem;
+                      color: $color-main;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $color-main;
+                        transition: text-decoration .2s;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    @include respond(tab-land) {
+                      height: 45%;
+                    }
+
+                    @include respond(tab-port) {
+                      height: 40%;
+                      width: 70%;
+                      margin: 0 auto;
+                    }
+
+                    @include respond(phone) {
+                      width: 80%;
+                      height: 60%;
+                    }
+                  }
+                @include respond(tab-port) {
+                  height: 60%;
+                }
+
+                @include respond(phone) {
+                  height: 40%;
+                }
+              }
+            }
+        }
+    }
+}
+
+.section-advantages {
+    height: auto;
+
+    .grid-gallery {
+
+        &__list {
+            &--advantages {
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: repeat(2, min-content);
+              grid-gap: 2rem;
+
+              @include respond(tab-port) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, min-content);
+                grid-gap: 3rem;
+              }
+
+              @include respond(phone) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, min-content);
+                grid-gap: 3rem;
+              }
+            }
+        }
+
+        &__item {
+            
+            &--advantages {
+              background-color: $color-light-grey-2;  
+              box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+              padding: 3rem 3rem 4rem;
+
+              h4 {
+                  font-size: 2rem;
+                  color: $color-main;
+                  padding-bottom: 1.5rem;
+              }
+
+              p {
+                  font-size: 1.8rem;
+                  font-weight: 300;
+                  line-height: 1.55;
+                  margin-top: 1rem;
+              }
+            }
+        }
+    }
+}
+
+.section-pricing {
+    height: auto;
+
+    .grid-gallery {
+        height: auto;
+
+        @include respond(tab-port) {
+          width: 70%;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+        }
+
+        &__list {
+            margin: 0 auto;
+            
+            &--pricing {
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(1, 100%);
+              grid-gap: 3rem;
+
+              @include respond(tab-port) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, min-content);
+                grid-gap: 4rem;
+              }
+            }
+        }
+
+        &__item {
+            
+            &--pricing {
+              background-color: $color-white;
+              border: .1rem solid $color-bg-primary;  
+              box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+              padding: 2rem 4rem;
+              text-align: center;
+
+              h5 {
+                  min-height: 28%;
+                  font-size: 3.3rem;
+                  line-height: 1.35;
+                  padding-bottom: 1rem;
+                  font-weight: 300;
+              }
+
+              .item-content {
+
+                  a:not(.cta) {
+                      color: $color-main;
+                      text-decoration: none;
+                      border-bottom: 1px solid $color-main;
+                  }
+
+                  .sample {
+                      max-width: 80%;
+                      font-size: 2rem;
+                      color: #777;
+                      margin: 0 auto;
+                  }
+
+                  .price, .timing {
+                      display: block;
+                  }
+
+                  .price {
+                      font-size: 3rem;
+                      font-weight: 300;
+                      line-height: 1.23;
+                      margin-top: 3rem;
+                      
+                  }
+
+                  .timing {
+                      font-size: 2.4rem;
+                      font-weight: 300;
+                      line-height: 1.55;
+                      margin-top: 2.5rem;
+                  }
+
+                  .fee-calc {
+                      display: block;
+                      font-size: 2rem;
+                      width: max-content;
+                      margin: 0 auto;
+                  }
+
+                  .cta {
+                      width: max-content;
+                      margin: 3rem auto 0;
+                  }
+              }
+            }
+        }
+    }
+}
+
+.section-faqs {
+    height: auto;
+    margin-top: 3rem;
+}
+
+.section-conditions {
+    height: auto;
+
+    .slick-slide {
+      background-color: $color-white;  
+      box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+      padding: 3rem 3rem 4rem;
+      border-radius: .5rem;
+    }
+
+    .item-heading {
+      font-size: 2rem;
+      line-height: 1.35;
+      font-weight: 500;
+      color: $color-black;
+      padding-bottom: 1rem;
+    }
+
+    .item-content {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.55;
+      color: $color-black;
+      margin-top: 1rem;
+      padding-left: 2rem;
+
+      ul {
+          list-style-type: disc;
+      }
+    }
+}
+
+.section-process {
+    height: auto;
+
+    .grid-gallery {
+
+        &__list {
+            &--process {
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: repeat(2, min-content);
+              grid-gap: 2rem;
+
+              @include respond(tab-port) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, min-content);
+                grid-gap: 4rem;
+              }
+
+              @include respond(phone) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, min-content);
+                grid-gap: 4rem;
+              }
+            }
+        }
+
+        &__item {
+            
+            &--process {
+              background-color: $color-white;
+              padding: 3rem 3rem 4rem;
+              position: relative;
+
+              span {
+                  position: absolute;
+                  top: 2.5rem;
+                  left: 0;
+                  font-size: 5.4rem;
+                  color: $color-main;
+              }
+
+              h4 {
+                  font-size: 2.2rem;
+                  line-height: 1.35;
+                  padding-bottom: 1.5rem;
+                  padding-left: 2rem;
+              }
+
+              p {
+                  font-size: 1.8rem;
+                  font-weight: 300;
+                  line-height: 1.55;
+                  margin-top: 1rem;
+              }
+            }
+        }
+    }
+}
+
+.home-btn {
+  display: none;
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  z-index: 101;
+
+  &__link {
+    text-decoration: none;
+    display: block;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  &__icon {
+    color: $color-main;
+    font-size: 2rem;
+    transition: color .2s;
+
+    &:hover {
+      color: rgba($color-main, .7);
+    }
+  }
+
+  @include respond(tab-port) {
+    height: 7rem;
+    width: 7rem;
+    top: 2rem;
+    left: 1rem;
+  }
+
+  @include respond(tab-port) {
+    height: 5rem;
+    width: 5rem;
+    top: 3rem;
+  }
+}

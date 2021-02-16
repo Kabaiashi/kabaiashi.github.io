@@ -1,0 +1,42 @@
+.site-header__visual {
+    width: 40%;
+    height: 100%;
+    position: relative;
+
+    .visual-layer {
+        width: 90%;
+        position: absolute;
+
+        &--top {
+            height: 100%;
+            top: 0;
+            left: 8%;
+            background: $color-light-grey url('../img/start-page--big.jpg') center no-repeat;
+            background-size: cover;
+            z-index: 3;
+            position: relative;
+        }
+
+        &--middle {
+            height: 92%;
+            top: 1.5vh;
+            left: 3%;
+            background-color: $color-white;
+            border-left: 1px solid $color-main;
+            border-bottom: 1px solid $color-main;
+            z-index: 2;
+        }
+
+        &--bottom {
+            height: 90%;
+            top: 0;
+            left: 0;
+            background-color: $color-main;
+            z-index: 1;
+        }
+    }
+
+    @include respond(phone) {
+        height: 92%;
+    }
+}

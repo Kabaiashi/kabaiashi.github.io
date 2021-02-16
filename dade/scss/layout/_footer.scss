@@ -1,0 +1,158 @@
+.main-footer {
+	max-width: 135rem;
+	height: 30vh;
+	background-color: rgb(103, 108, 112);
+	padding: 0 15rem 4rem;
+	margin: 0 auto;
+	position: relative;
+	font-size: 1.6rem;
+	color: rgba(3, 1, 1, 0.4);
+
+	&__primary-navigation {
+		height: 30%;
+		border-bottom: 1px solid $color-logo-grey-light;
+		overflow: hidden;
+
+	    .navigation {
+			width: 40%;
+
+	    	&__link {
+	    		font-size: 1.6rem;
+	    		transition: color .3s;
+
+	    		&:hover {
+	    			color: $color-main;
+
+	    			&:after {
+	    				width: 0;
+	    			}
+	    		}
+	    	}
+	    }
+	}
+
+	@include respond(tab-port) {
+	  height: auto;
+    }
+
+	&__secondary-navigation {
+
+		.social {
+			height: 15%;
+			width: 60%;
+			font-size: 2rem;
+			color: $color-logo-grey;
+			margin-left: auto;
+			
+			&__list {
+			    list-style-type: none;
+			    text-align: right;
+			    margin: 0 auto;
+
+			    @include respond(tab-port) {
+	                text-align: center;
+	            }
+			}
+
+			&__item {
+				display: inline-block;
+
+				:not(:last-child) {
+					margin-right: 2rem;
+				}
+			}
+
+			&__link {
+				text-decoration: none;
+				font-size: 1.8rem;
+				font-weight: 800;
+				color: $color-logo-grey;
+			}
+
+			&__icon {
+				height: 4rem;
+				width: 4rem;
+				line-height: 100%;
+
+				&.fa-envelope {
+
+					&:hover {
+						color: $color-google-red;
+					}
+				}
+
+				&.fa-skype {
+
+					&:hover {
+						color: $color-skype-blue;
+					}
+				}
+
+				&.fa-whatsapp {
+					color: $color-logo-grey;
+					font-weight: 600;
+
+					&:hover {
+						color: $color-whatsapp-green;
+					}
+				}
+
+				&.fa-linkedin {
+
+					&:hover {
+						color: $color-linkedin-blue;
+					}
+				}
+			}
+
+			@include respond(tab-port) {
+	            width: 100%;
+	        }
+		}
+	}
+
+	.essentials {
+		width: 80%;
+		margin: 5rem auto 0;
+
+		&__address {
+			margin-bottom: 3rem;
+
+			@include respond(tab-port) {
+	            text-align: center;
+	            font-size: 1.5rem;
+	        }
+		}
+
+		&__rights {
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px solid $color-logo-grey;
+			font-size: 1.4rem;
+
+			i {
+
+				&:nth-child(1) {
+					color: $color-logo-red;
+				}
+
+				&:nth-child(2) {
+					color: rgb(131, 152, 171);
+				}
+			}
+
+			@include respond(tab-port) {
+	            flex-direction: column;
+	            align-items: center;
+	        }
+		}
+	}
+
+	@include respond(phone) {
+	    padding: 0;
+	}
+}
+
+#exclude { display: none; } //temporarily excluded
+
+

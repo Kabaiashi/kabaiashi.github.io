@@ -1,0 +1,39 @@
+.site-navigation {
+    width: 31%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__item {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.55;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-black;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        transition: color .3s ease;
+
+        &:hover {
+            @media(hover: hover) and (pointer: fine) { //Helps to avoid hover state stuck on touchscreens
+              color: $color-main;
+            }
+        }
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+}

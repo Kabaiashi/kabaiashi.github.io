@@ -1,0 +1,82 @@
+.form {
+
+	&__group {
+		margin-bottom: 2rem;
+		width: 100%;
+
+		@include respond(tab-port) {
+		  margin: 0 auto 1rem;
+		  width: 70%;
+		}
+		
+		@include respond(phone) {
+		  width: 100%;
+		  margin-bottom: 1.5rem;
+        }
+	}
+
+	&__input {
+		font-family: inherit;
+		font-size: 1.5rem;
+		color: rgba($color-black, .7);
+		padding: 1rem 2rem;
+		border-radius: 2px;
+		background-color: rgba($color-white, .9);
+		border: none;
+		border-bottom: 3px solid transparent;
+		width: 100%;
+		display: block;
+
+		&--text {
+			resize: none;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba($color-black, .1);
+			border-bottom: 3px solid $color-logo-blue;
+
+			&:invalid {
+			border-bottom: 3px solid $color-main;
+			}
+		
+		}
+
+		&::placeholder {
+			color: $color-logo-grey;
+		}
+
+		@include respond(tab-port) {
+		  padding: .7rem 2rem;
+		  font-size: 1.4rem;
+		}
+	}
+
+	&__label {
+		font-size: 1.3rem;
+		font-weight: 700;
+		margin-left: 2rem;
+		margin-top: .7rem;
+		display: block;
+		transition: all .4s;
+
+		@include respond(tab-port) {
+          font-size: 1.2rem;
+        }
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-.5rem);
+	}
+
+	&__btn {
+		@extend .btn;
+		margin: 0 auto;
+
+		&:hover {				
+			opacity: .9;
+		}
+	}
+}

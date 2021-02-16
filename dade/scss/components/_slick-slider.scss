@@ -1,0 +1,82 @@
+.slider-box {
+	height: auto;
+	position: relative;
+
+	@include respond(phone) {
+		height: auto;
+	}
+}
+
+.slick-slider {
+	width: 100%;
+}
+
+.slick-track {
+	height: 100%;
+	margin-bottom: 5rem;
+	padding: 0 2.3rem;
+}
+
+.slick-arrows {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+}
+
+.slick-arrow {
+	@extend .btn;
+	@extend .btn--shadowed;
+	width: 10rem;
+	background-color: rgba($color-main, .3);
+	outline: none;
+	z-index: 1;
+
+	&:hover {
+		@extend .btn--hovered;
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: 1px solid rgba($color-main, .6);
+	}
+
+	&--prev {
+		margin-right: 1rem;
+	}
+
+	&--next {
+		margin-left: 1rem;
+	}
+}
+
+.slick-slide {
+	height: 100%;
+	
+	&:not(:last-child) {
+		margin-right: 5rem;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

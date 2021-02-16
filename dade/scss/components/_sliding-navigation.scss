@@ -1,0 +1,54 @@
+.sliding-navigation {
+    background-color: rgba($color-white, .9);
+    position: fixed;
+    top: -8.5rem;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    z-index: 100;
+    padding: 0 2.5rem 0 10rem;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        width: 40%;
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__link {
+        display: block;
+		text-decoration: none;
+		font-size: 1.8rem;
+		color: $color-main;
+		font-variant: small-caps;
+        text-align: center;
+        transition: color .2s;
+
+        &:hover {
+            color: rgba($color-main, .7);
+        }
+    }
+
+    .logo {
+        opacity: .7;
+    }
+
+    @include respond(tab-port) {
+		display: none;
+	}
+}

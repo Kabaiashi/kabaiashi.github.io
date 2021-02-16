@@ -1,0 +1,149 @@
+.section-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, $color-logo-grey, $color-logo-grey-light);
+
+    .contact {
+        display: flex;
+        justify-content: space-around;
+    	width: 80rem;
+        height: 85%;
+    	background: linear-gradient(100deg, $color-white 40%, $color-almost-white 40%);
+    	background-blend-mode: screen;
+    	background-size: cover;
+    	border-radius: 3px;
+    	box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
+
+        &__text, &__form {
+            padding: 5rem 6rem;
+
+            @include respond(tab-port) {
+                padding: 1rem 3rem;
+            }
+        }
+        
+        &__text {
+            width: 40%;
+            text-align: center;
+
+            @include respond(tab-port) {
+                width: 70%;
+            }
+        }
+
+        &__heading {
+            font-size: 2.2rem;
+            color: $color-main;
+        }
+
+        &__details {
+            margin-top: 2rem;
+
+            @include respond(tab-port) {
+              margin-top: .5rem;
+            }
+        }
+
+        &__list {
+          list-style-type: none;
+
+          &-item {
+              font-size: 2rem;
+
+              &:not(:first-child) {
+                  margin-top: 2rem;
+
+                  @include respond(tab-port) {
+                    margin-top: .5rem;
+                  }
+              }
+
+              .link {
+                  color: #aaa;
+                  text-decoration: none;
+
+                  &--mail {
+
+                    &:hover, &:active {
+                        color: $color-pleasant-violet;
+                    }
+                  }
+
+                  &--wa {
+
+                    i {
+                        font-size: 2.4rem;
+                        font-weight: 700;
+
+                        &:hover, &:active {
+                            color: $color-whatsapp;
+                        }
+                    }
+                  }
+              }
+          }
+        }
+
+    	&__form {
+            width: 55%;
+            
+            @include respond(tab-port) {
+                width: 70%;
+            }
+
+            // .recaptcha {
+            //     width: 100%;
+            //     display: flex;
+            //     justify-content: center;
+
+            //     .g-recaptcha {
+
+            //         div {
+            //             width: 100% !important;
+
+            //             iframe {
+            //                 width: 100%;
+            //                 overflow: hidden;
+
+            //                 @include respond(tab-port) {
+            //                 width: auto;
+            //                 }
+            //             }
+            //         }
+            //     }
+
+            //     @include respond(tab-port) {
+            //     }
+
+            //     @include respond(phone) {
+            //         justify-content: flex-end;
+            //     }
+            // }
+
+            // 
+        }
+        
+        @include respond(tab-land) {
+                    height: 85%;
+                    width: 85%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(100deg, $color-white 20%, $color-almost-white 20%);
+                }
+
+        // @include respond(phone) {
+        //     width: 90%;
+        // }
+    }
+
+    @include respond(phone) {
+        height: 100%;
+    }
+}
+
+
+

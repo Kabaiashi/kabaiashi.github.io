@@ -1,0 +1,59 @@
+.btn {
+	display: block;
+	background-color: $color-white;
+	font-family: 'Futura Light', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: 0.15rem;
+	line-height: 1.5;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: $color-main;
+	border: 1px solid $color-main;
+	outline: none;
+	padding: 1rem 4rem;
+	
+
+	&--hovered {
+		transition: all .3s ease;
+
+		&:hover {
+			@media(hover: hover) and (pointer: fine) { //Helps to avoid hover state stuck on touchscreens
+		      cursor: pointer;
+		      background-color: rgba($color-main, .6);
+		      color: $color-white;
+			  border-color: transparent;
+			}
+		}
+		
+		&:active {
+		  transform: scale(.9);
+		//   outline: none;
+		}
+		
+		&:focus {
+			outline: 1px solid rgba($color-main, .6);
+		}
+	}
+
+	a {
+			display: block;
+ 			padding: 1rem 2rem;
+			text-decoration: none;
+			color: inherit;
+			outline: none;
+	}
+
+	&--rounded {
+		border-radius: 3px;
+	}
+
+	&--shadowed {
+		box-shadow: 0 1.5rem 2.5rem rgba($color-black, .2);
+
+		&:active {
+			box-shadow: 0 .5rem 1.5rem rgba($color-black, .5);
+		}
+	}
+}

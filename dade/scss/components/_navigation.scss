@@ -1,0 +1,59 @@
+.navigation {
+	width: 20%;
+	height: 100%;
+
+	&__nav {
+		height: 100%;
+	}
+
+	&__list {
+		height: 100%;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+		font-size: 2rem;
+		color: inherit;
+		font-variant: small-caps;
+		text-align: left;
+		position: relative;
+
+		&:after {
+ 			content: '';
+ 			position: absolute;
+ 			bottom: 0;
+ 			left: 0;
+ 			height: 2px;
+ 			width: 0;
+ 			transition: width .5s;
+ 			background-color: $color-logo-blue;
+ 		}
+
+ 		&:hover {
+
+ 			&:after {
+ 				width: 100%;
+ 			}	
+ 		}
+	}
+
+	&__item {
+		[href="#contact"] {
+			color: $color-white;
+
+			&:hover {
+				color: $color-main;
+			}
+		}
+	}
+
+	@include respond(tab-port) {
+		display: none;
+	}
+}
+
