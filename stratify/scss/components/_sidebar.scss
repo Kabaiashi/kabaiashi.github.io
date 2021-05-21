@@ -1,0 +1,11 @@
+.site-sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: $color-primary;
+    grid-area: sidebar;
+}
+
+.logo {
+    width: 54.17%;
+    padding: 2.4rem 0 0 2.4rem;
+}

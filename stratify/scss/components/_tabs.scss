@@ -1,0 +1,42 @@
+.tabs {
+    margin-top: 1.5rem;
+    padding-left: 4px;
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 3.1rem;
+        }
+        &.active {
+            position: relative;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background-color: #02F4B5;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+
+            } 
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $color-primary;
+        cursor: pointer;
+        transition: color .2s ease-in-out;
+        &:hover {
+            color: lighten($color: $color-primary, $amount: 15);
+        }
+    }
+}
+
+.active {
+
+}

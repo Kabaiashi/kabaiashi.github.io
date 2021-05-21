@@ -1,0 +1,29 @@
+.site-navigation {
+    font-weight: bold;
+    &__list {
+        list-style-type: none;
+        text-indent: 0;
+        padding: 4.7rem 0 0 3.5rem;
+    }
+    &__item {
+        &:not(:first-child) {
+            margin-top: 5.5rem;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $color-secondary;
+        transition: color .2s ease-in-out;
+        &:hover {
+            color: darken($color: $color-secondary, $amount: 30);
+        }
+    }
+    .icon {
+        &::before {
+            color: $color-icons;
+            margin-right: 1.2rem;
+        }   
+    }
+}

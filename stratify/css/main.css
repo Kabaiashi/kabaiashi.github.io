@@ -1,0 +1,260 @@
+/*
+ 0 - 600px:       Phone
+ 600 - 950px:     Tablet portrait
+ */
+/*
+ $breakboint argument choices:
+ - phone
+ - tab-port
+
+ 1em = 16px
+ */
+.site-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  grid-template-areas: "sidebar main-container"; }
+
+.main-container {
+  grid-area: main-container; }
+
+.user-corner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .user-corner__account {
+    margin-left: 2.6rem; }
+  .user-corner__notifications {
+    text-decoration: none; }
+  .user-corner .icon-bell-icon {
+    position: relative; }
+    .user-corner .icon-bell-icon::before {
+      font-size: 2rem;
+      color: #53596B; }
+    .user-corner .icon-bell-icon::after {
+      content: "";
+      width: 0.7rem;
+      height: 0.7rem;
+      background-color: #FF9900;
+      position: absolute;
+      top: -0.5rem;
+      right: 0;
+      border-radius: 50%; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media (max-width: 59.375em) {
+    html {
+      font-size: 60%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: #F5F7FA;
+  font-family: "HK Nova Medium", sans-serif;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: 'HK Nova Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local("HK Nova Medium"), url("../fonts/fonts/HKNova-Medium.woff") format("woff"); }
+
+.site-sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: #283046;
+  grid-area: sidebar; }
+
+.logo {
+  width: 54.17%;
+  padding: 2.4rem 0 0 2.4rem; }
+
+.site-header {
+  background-color: white;
+  padding: 1.2rem 0 0.5rem 2.5rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-transform: capitalize; }
+  .site-header__description {
+    color: #53596B; }
+  .site-header__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: #283046;
+    margin-top: 1px; }
+
+.topbar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #F5F7FA;
+  padding: 0.9rem 3.2rem 1rem 2.7rem; }
+
+.site-navigation {
+  font-weight: bold; }
+  .site-navigation__list {
+    list-style-type: none;
+    text-indent: 0;
+    padding: 4.7rem 0 0 3.5rem; }
+  .site-navigation__item:not(:first-child) {
+    margin-top: 5.5rem; }
+  .site-navigation__link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    text-decoration: none;
+    color: #E7E9EC;
+    transition: color .2s ease-in-out; }
+    .site-navigation__link:hover {
+      color: #929ba8; }
+  .site-navigation .icon::before {
+    color: #B3BAC7;
+    margin-right: 1.2rem; }
+
+.tabs {
+  margin-top: 1.5rem;
+  padding-left: 4px; }
+  .tabs__list {
+    list-style-type: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  .tabs__item:not(:last-child) {
+    margin-right: 3.1rem; }
+  .tabs__item.active {
+    position: relative; }
+    .tabs__item.active::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #02F4B5;
+      position: absolute;
+      left: 0;
+      bottom: -5px; }
+  .tabs__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #283046;
+    cursor: pointer;
+    transition: color .2s ease-in-out; }
+    .tabs__link:hover {
+      color: #445177; }
+
+.breadcrumb ul {
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #828BA3; }
+  .breadcrumb ul li {
+    position: relative; }
+    .breadcrumb ul li:not(:last-child) {
+      margin-right: 3rem; }
+      .breadcrumb ul li:not(:last-child)::before {
+        content: "";
+        width: 8px;
+        height: 11px;
+        background: url(../img/chevron-right.png) center no-repeat;
+        position: absolute;
+        top: 50%;
+        right: -1.8rem;
+        transform: translateY(-50%); }
+    .breadcrumb ul li:first-child::before {
+      content: ""; }
+    .breadcrumb ul li a {
+      text-decoration: none;
+      color: #828BA3;
+      transition: color .2s ease-in-out; }
+      .breadcrumb ul li a:hover {
+        color: #67718b; }
+
+.custom-select-wrapper {
+  position: relative;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 11.5rem; }
+
+.custom-select {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .custom-select__trigger {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #283046;
+    line-height: 24px;
+    cursor: pointer; }
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-top: 0;
+  background: #53596B;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2; }
+
+.custom-select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all; }
+
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #E7E9EC;
+  line-height: 2.4rem;
+  cursor: pointer;
+  transition: all 0.5s; }
+  .custom-option:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1); }
+  .custom-option .selected {
+    color: #ffffff; }
+
+/*# sourceMappingURL=main.css.map */

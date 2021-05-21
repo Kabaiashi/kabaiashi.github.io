@@ -1,0 +1,39 @@
+.site-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "sidebar main-container";
+}
+
+.main-container {
+    grid-area: main-container;
+}
+
+.user-corner {
+    display: flex;
+    align-items: center;
+
+    &__account {
+        margin-left: 2.6rem;
+    }
+    &__notifications {
+        text-decoration: none;
+    }
+
+    .icon-bell-icon {
+        position: relative;
+        &::before {
+            font-size: 2rem;
+            color: $color-tertiary;
+        }
+        &::after {
+            content: "";
+            width: 0.7rem;
+            height: 0.7rem;
+            background-color: #FF9900;
+            position: absolute;
+            top: -0.5rem;
+            right: 0;
+            border-radius: 50%;
+        }
+    }
+}

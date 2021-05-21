@@ -1,0 +1,22 @@
+ // MEDIA QUERY MANAGER
+ /*
+ 0 - 600px:       Phone
+ 600 - 950px:     Tablet portrait
+ */
+
+ /*
+ $breakboint argument choices:
+ - phone
+ - tab-port
+
+ 1em = 16px
+ */
+
+ @mixin respond($breakpoint) {
+ 	@if $breakpoint == phone {
+ 		@media (max-width: 37.5em) { @content };    //600px
+ 	}
+ 	@if $breakpoint == tab-port {
+ 		@media (max-width: 59.375em) { @content };   //950px
+ 	}
+ }
